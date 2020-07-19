@@ -2,7 +2,7 @@
 
 目录：
 
-1. 锁到底是什么
+1. 标题：锁到底是什么
 
 2. 进程间通信
 
@@ -16,7 +16,7 @@
 
    
 
-# 锁到底是什么
+标题： **锁到底是什么**
 
 由于有时钟中断，以及出现多个进程，多个进程操作同一个数据，就有可能使数据变成脏数据。为了解决脏数据的问题，就出现了锁这种机制，保护数据。
 
@@ -68,6 +68,7 @@
 ### 多处理器：
 
 屏蔽中断只会对执行了中断指令的那个CPU有效，但是其他CPU还是有可能会改变共享内存中的数据的。
+
 
 ### 硬件原子操作：
 
@@ -186,9 +187,12 @@ CPU cache有什么意义？cache的容量远远小于主存，因此出现cache 
  B. 空间局部性：如果某个数据被访问，那么与它相邻的数据很快也可能被访问；
 
 单核cpu cache结构：
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/127300/1594900482944-da238b0e-f476-4953-854b-a21caa4495cf.png#align=left&display=inline&height=281&margin=%5Bobject%20Object%5D&name=image.png&originHeight=281&originWidth=623&size=13136&status=done&style=none&width=623)
 
+
 多核cpu cache结构：
+
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/127300/1594900504897-b01c4bac-fe13-4b4a-ad3a-77216f56d49c.png#align=left&display=inline&height=281&margin=%5Bobject%20Object%5D&name=image.png&originHeight=281&originWidth=760&size=15948&status=done&style=none&width=760)
 
 MESI(缓存一致性）： 缓存一致性：在多核CPU中，内存中的数据会在多个核心中存在数据副本，某一个核心发生修改操作，就产生了数据不一致的问题。而一致性协议正是用于保证多个CPU cache之间缓存共享数据的一致。
@@ -201,7 +205,6 @@ cpu结构：
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/127300/1594900152494-f905ccab-9a9d-4c32-8275-08abf135ad2c.png#align=left&display=inline&height=461&margin=%5Bobject%20Object%5D&name=image.png&originHeight=461&originWidth=690&size=31360&status=done&style=none&width=690)
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/127300/1594900235792-4ae5fe0f-60df-44b0-bfc2-5a08e2af3f88.png#align=left&display=inline&height=570&margin=%5Bobject%20Object%5D&name=image.png&originHeight=570&originWidth=517&size=49520&status=done&style=none&width=517)
-
 
 
 # 编译器
@@ -262,7 +265,6 @@ IA-32/AMD64架构上，在Linux下常用的GCC编译器上，优化屏障定义�
 - 必须按照代码顺序产生汇编代码，不得越过屏障
 
 > C/C的volatile关键字也能起到优化限制的作用，但是和Java中的volatile（Java 5之后）不同，C/C中的volatile不提供任何防止乱序的功能，也并不保证访存的原子性。
-
 
 
 **内存屏障 (Memory Barrier)** 分为 **写屏障（Store Barrier）**、**读屏障（Load Barrier）**和**全屏障（Full Barrier）**，其作用有两个：
