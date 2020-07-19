@@ -6,3 +6,5 @@
 - [微服务架构学习与思考(03)：微服务总体架构图解](https://www.cnblogs.com/jiujuan/p/13295147.html)
 - [微服务架构学习与思考(04)：微服务技术体系](https://www.cnblogs.com/jiujuan/p/13301055.html)
 
+## 系统和其他
+- [到底什么是锁？](./content/what-is-lock-1.md)
