@@ -8,7 +8,7 @@
 
 ### go-micro 微服务实践
 
-- [go-micro微服务实战(1)-Micro微服务框架介绍](https://github.com/jiujuan/zenblog/blob/master/content/go-micro-learning-part-one.md)
+- [golang微服务框架go-micro学习(01)-Micro微服务框架介绍](https://github.com/jiujuan/zenblog/blob/master/content/go-micro-learning-part-one.md)
 
 
 
