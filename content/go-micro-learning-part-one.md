@@ -157,7 +157,7 @@ Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) 仓
 ![four-image](../images/go-micro-srv-componets-04.png)
 
 
-## Go-Micro 学习资源
+## 三、Go-Micro 学习资源
 - [micro](https://github.com/micro/micro)
 - [go-micro](https://github.com/micro/go-micro)
 - [go-plugins](https://github.com/micro/go-plugins)
@@ -168,6 +168,6 @@ Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) 仓
 - [awesome-micro](https://github.com/micro-community/awesome-micro)
 - [micro-in-cn](https://github.com/micro-in-cn)
 
-## 参考
+## 四、参考
 - [go-micro 2.x 中文文档](https://learnku.com/docs/go-micro/2.x)
 - [micro](https://github.com/hb-go/micro)
