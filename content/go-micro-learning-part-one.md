@@ -115,17 +115,32 @@ SRV服务是标准的RPC服务，是你通常编写的服务类型。通常称�
 go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它用于分布式系统开发。这个插件抽象出了分布式系统的细节。
 ![three](../images/go-micro-arch-program-03.png)
 
-- Service 最顶层的 Service 接口是构建服务的主要组件，它把底层的各个包需要实现的接口，做了一次封装，包含了一系列用于初始化 Service 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
-- Client 是请求服务的接口，从 Registry 中获取 Server 信息，然后封装了 Transport 和 Codec 进行 RPC 调用，也封装了 Broker 进行消息发布，默认通过 RPC 协议进行通信，也可以基于 HTTP 或 gRPC；
+它的主要组成如下：
+- **Registry** 
+Registry注册模块提供了可插拔的服务注册与发现功能。当有新的 Service 发布时，需要向 Registry 注册，然后 Registry 通知客户端进行更新，Go Micro 默认基于 consul 实现服务注册与发现（v1.2.1版本后换成了 etcd），当然，也可以替换成 etcd、zookeeper、kubernetes 等；
+- **Selector** 
+Selector选择器通过选举提供了负载均衡机制。当客户端请求服务时，Selector 根据不同的算法从 Registery 的主机列表中得到可用的 Service 节点列表。选择器会选择其中的一个来提供服务。多次调用选择器会触发均衡算法，当前算法有round robin（循环调度），哈希随机和黑名单。
+- **Broker** 
+Beoker是消息发布和订阅的可插拔接口。对事件驱动的微服务架构，消息广播与定于得放在首要位置。默认实现是基于 HTTP，在生产环境可以替换为 Kafka、RabbitMQ 等其他组件实现；
+- **Transport** 
+Transport传输也是可插拔的点到点消息传输接口，默认使用 HTTP 同步通信，也可以支持 TCP、UDP、NATS、gRPC 等其他方式。
+- **Client** 
+Client客户端提供发起RPC请求的能力。
+它集合了注册（registry）、选择器（selector）、broker、传输（transport），当然也具备重试、超时、上下文等。
+- **Server**
+ Serve服务是运行了真实微服务的程序。
+ 监听服务调用的接口，也将以接收 Broker 推送过来的消息，需要向 Registry 注册自己的存在与否，以便客户端发起请求，和 Client 一样，默认基于 RPC 协议通信，也可以替换为 HTTP 或 gRPC；
+ - **Codec** 
+用于解决传输过程中的编码和解码，默认实现是 protobuf，也可以替换成 json、mercury 等；
 
-- Server 是监听服务调用的接口，也将以接收 Broker 推送过来的消息，需要向 Registry 注册自己的存在与否，以便客户端发起请求，和 Client 一样，默认基于 RPC 协议通信，也可以替换为 HTTP 或 gRPC；
-- Broker 是消息发布和订阅的接口，默认实现是基于 HTTP，在生产环境可以替换为 Kafka、RabbitMQ 等其他组件实现；
-- Codec 用于解决传输过程中的编码和解码，默认实现是 protobuf，也可以替换成 json、mercury 等；
-- Registry 用于实现服务的注册和发现，当有新的 Service 发布时，需要向 Registry 注册，然后 Registry 通知客户端进行更新，Go Micro 默认基于 consul 实现服务注册与发现，当然，也可以替换成 etcd、zookeeper、kubernetes 等；
-- Selector 是客户端级别的负载均衡，当有客户端向服务端发送请求时，Selector 根据不同的算法从 Registery 的主机列表中得到可用的 Service 节点进行通信。目前的实现有循环算法和随机算法，默认使用随机算法，另外，Selector 还有缓存机制，默认是本地缓存，还支持 label、blacklist 等方式；
-- Transport 是服务之间通信的接口，也就是服务发送和接收的最终实现方式，默认使用 HTTP 同步通信，也可以支持 TCP、UDP、NATS、gRPC 等其他方式。
+**Service** ：
 
-Go Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) 仓库，用于维护 Go Micro 核心接口支持的可替换插件：
+最顶层的 Service 服务，构建服务的主要组件，它把底层各个需要实现的接口做了一次封装，包含了一系列用于初始化 Server 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
+创建一个服务的函数 `micro.NewService()`，客户端和服务端都会调用这个函数来创建一个服务。
+
+**Plugins**：
+
+Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) 仓库，用于维护 Go Micro 核心接口支持的可替换插件：
 
 | 接口      | 支持组件                             |
 | --------- | ------------------------------------ |
