@@ -119,9 +119,10 @@ go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它
 >from https://micro.mu/ ， 图3
 
 ### 它的主要组成如下：
+
 - **Registry 服务注册与发现** 
 Registry模块提供了可插拔的服务注册与发现功能。目前实现的consul,mdns, etcd,etcdv3,zookeeper,kubernetes.等等，
-go-micro 将此类任务抽象到一个接口中 `github.com/micro/go-micro/v2/registry/Registry` ：
+go-micro 将此类任务抽象到一个接口中，接口位于 `github.com/micro/go-micro/v2/registry/Registry` ：
 ```go
 // The registry provides an interface for service discovery
 // and an abstraction over varying implementations
