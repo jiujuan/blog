@@ -114,33 +114,260 @@ SRV服务是标准的RPC服务，是你通常编写的服务类型。通常称�
 ## 二、Go-Micro
 
 ### 什么是Go-Micro
-go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它用于分布式系统开发。这个插件抽象出了分布式系统的细节。
+go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它用于分布式系统开发。这个插件抽象出了分布式系统各个组件。
 ![three](../images/go-micro-arch-program-03.png)
+>from https://micro.mu/ ， 图3
 
-它的主要组成如下：
-- **Registry** 
-Registry注册模块提供了可插拔的服务注册与发现功能。当有新的 Service 发布时，需要向 Registry 注册，然后 Registry 通知客户端进行更新，Go Micro 默认基于 consul 实现服务注册与发现（v1.2.1版本后换成了 etcd），当然，也可以替换成 etcd、zookeeper、kubernetes 等；
-- **Selector** 
-Selector选择器通过选举提供了负载均衡机制。当客户端请求服务时，Selector 根据不同的算法从 Registery 的主机列表中得到可用的 Service 节点列表。选择器会选择其中的一个来提供服务。多次调用选择器会触发均衡算法，当前算法有round robin（循环调度），哈希随机和黑名单。
-- **Broker** 
-Beoker是消息发布和订阅的可插拔接口。对事件驱动的微服务架构，消息广播与定于得放在首要位置。默认实现是基于 HTTP，在生产环境可以替换为 Kafka、RabbitMQ 等其他组件实现；
-- **Transport** 
-Transport传输也是可插拔的点到点消息传输接口，默认使用 HTTP 同步通信，也可以支持 TCP、UDP、NATS、gRPC 等其他方式。
-- **Client** 
+### 它的主要组成如下：
+- **Registry 服务注册与发现** 
+Registry模块提供了可插拔的服务注册与发现功能。目前实现的consul,mdns, etcd,etcdv3,zookeeper,kubernetes.等等，
+go-micro 将此类任务抽象到一个接口中 `github.com/micro/go-micro/v2/registry/Registry` ：
+```go
+// The registry provides an interface for service discovery
+// and an abstraction over varying implementations
+// {consul, etcd, zookeeper, ...}
+type Registry interface {
+	Init(...Option) error
+	Options() Options
+	Register(*Service, ...RegisterOption) error
+	Deregister(*Service, ...DeregisterOption) error
+	GetService(string, ...GetOption) ([]*Service, error)
+	ListServices(...ListOption) ([]*Service, error)
+	Watch(...WatchOption) (Watcher, error)
+	String() string
+}
+```
+
+- **Selector 服务选择逻辑** 
+Selector选择器实现了负载均衡机制。当客户端请求服务时，Selector 根据不同的算法从 Registery 的主机列表中得到可用的 Service 节点列表。选择器会选择其中的一个来提供服务。多次调用选择器会触发均衡算法，当前算法有round robin（循环调度），哈希随机和黑名单。接口在：github.com\micro\go-micro\v2\client\selector\Selector，selector.go，在client文件夹下，
+```Go
+// Selector builds on the registry as a mechanism to pick nodes
+// and mark their status. This allows host pools and other things
+// to be built using various algorithms.
+type Selector interface {
+	Init(opts ...Option) error
+	Options() Options
+	// Select returns a function which should return the next node
+	Select(service string, opts ...SelectOption) (Next, error)
+	// Mark sets the success/error against a node
+	Mark(service string, node *registry.Node, err error)
+	// Reset returns state back to zero for a service
+	Reset(service string)
+	// Close renders the selector unusable
+	Close() error
+	// Name of the selector
+	String() string
+}
+```
+
+- **Broker 异步消息** 
+Broker是消息发布和订阅的可插拔接口，属于异步消息，异步消息是降低解耦、提供系统鲁棒性的关键技术。接口为：github.com/micro/go-micro/v2/broker/Broker，broker.go
+```go
+// Broker is an interface used for asynchronous messaging.
+type Broker interface {
+	Init(...Option) error
+	Options() Options
+	Address() string
+	Connect() error
+	Disconnect() error
+	Publish(topic string, m *Message, opts ...PublishOption) error
+	Subscribe(topic string, h Handler, opts ...SubscribeOption) (Subscriber, error)
+	String() string
+}
+```
+go-plugins中已有的 [broker](https://github.com/micro/go-plugins/tree/master/broker) 插件， 包括 RabbitMQ, Kafka,NSQ等，默认实现基于 http，也是无需配置。
+这个可用于事件驱动的微服务架构。
+
+- **Transport 传输协议** 
+Transport定义了传输协议，这个接口也是可插拔的。默认使用 HTTP 同步通信，也可以支持 TCP、UDP、NATS、gRPC 等其他方式。它的接口在 github.com/micro/go-micro/v2/transport/Transport，transport.go
+```go
+// Transport is an interface which is used for communication between
+// services. It uses connection based socket send/recv semantics and
+// has various implementations; http, grpc, quic.
+type Transport interface {
+	Init(...Option) error
+	Options() Options
+	Dial(addr string, opts ...DialOption) (Client, error)
+	Listen(addr string, opts ...ListenOption) (Listener, error)
+	String() string
+}
+```
+
+- **Client 客户端** 
 Client客户端提供发起RPC请求的能力。
-它集合了注册（registry）、选择器（selector）、broker、传输（transport），当然也具备重试、超时、上下文等。
-- **Server**
+它集合了注册（registry）、选择器（selector）、broker、传输（transport），当然也具备重试、超时、上下文等。接口在 github.com/micro/go-micro/v2/client/Client，client.go
+```Go
+// Client is the interface used to make requests to services.
+// It supports Request/Response via Transport and Publishing via the Broker.
+// It also supports bidirectional streaming of requests.
+type Client interface {
+	Init(...Option) error
+	Options() Options
+	NewMessage(topic string, msg interface{}, opts ...MessageOption) Message
+	NewRequest(service, endpoint string, req interface{}, reqOpts ...RequestOption) Request
+	Call(ctx context.Context, req Request, rsp interface{}, opts ...CallOption) error
+	Stream(ctx context.Context, req Request, opts ...CallOption) (Stream, error)
+	Publish(ctx context.Context, msg Message, opts ...PublishOption) error
+	String() string
+}
+```
+
+- **Server 服务器**
  Serve服务是运行了真实微服务的程序。
- 监听服务调用的接口，也将以接收 Broker 推送过来的消息，需要向 Registry 注册自己的存在与否，以便客户端发起请求，和 Client 一样，默认基于 RPC 协议通信，也可以替换为 HTTP 或 gRPC；
- - **Codec** 
-用于解决传输过程中的编码和解码，默认实现是 protobuf，也可以替换成 json、mercury 等；
+ 监听服务调用的接口，也将以接收 Broker 推送过来的消息，需要向 Registry 注册自己的存在与否，以便客户端发起请求，和 Client 一样，默认基于 RPC 协议通信，也可以替换为 HTTP 或 gRPC； 接口在：github.com/micro/go-micro/v2/server/Server，server.go
+ ```Go
+// Server is a simple micro server abstraction
+type Server interface {
+	// Initialise options
+	Init(...Option) error
+	// Retrieve the options
+	Options() Options
+	// Register a handler
+	Handle(Handler) error
+	// Create a new handler
+	NewHandler(interface{}, ...HandlerOption) Handler
+	// Create a new subscriber
+	NewSubscriber(string, interface{}, ...SubscriberOption) Subscriber
+	// Register a subscriber
+	Subscribe(Subscriber) error
+	// Start the server
+	Start() error
+	// Stop the server
+	Stop() error
+	// Server implementation
+	String() string
+}
+```
+ 
+ - **Codec 编码解码** 
+用于解决传输过程中消息编码和解码，消息传输的格式。对应的接口在 
+github.com/micro/go-micro/v2/codec/Codec，codec.go
+```Go
+// Codec encodes/decodes various types of messages used within go-micro.
+// ReadHeader and ReadBody are called in pairs to read requests/responses
+// from the connection. Close is called when finished with the
+// connection. ReadBody may be called with a nil argument to force the
+// body to be read and discarded.
+type Codec interface {
+	Reader
+	Writer
+	Close() error
+	String() string
+}
+```
+默认实现是 protobuf，也可以替换成 json、bson、msgpack 等；
 
-**Service** ：
+> 说明：上面的v2，表示 go-micro v2.9.1，因为我用的这版本开发。
 
-最顶层的 Service 服务，构建服务的主要组件，它把底层各个需要实现的接口做了一次封装，包含了一系列用于初始化 Server 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
-创建一个服务的函数 `micro.NewService()`，客户端和服务端都会调用这个函数来创建一个服务。
+### Service
 
-**Plugins**：
+上面图3中最顶层的 Service 是系统中最核心的接口，它把其他核心接口有机的组织在一起，协调运行。包含了一系列用于初始化 Server 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
+
+创建一个服务的函数 `NewService()`，客户端和服务端都会调用这个函数来创建一个服务，这个函数位于：github.com\micro\go-micro\v2\micro.go
+```Go
+// NewService creates and returns a new Service based on the packages within.
+func NewService(opts ...Option) Service {
+    return newService(opts...) // <1> 这个函数
+}
+```
+
+上面函数 `NewService()` 返回的 `Service`  值是一个接口interface，也是位于github.com\micro\go-micro\v2\micro.go：
+```Go
+// Service is an interface that wraps the lower level libraries
+// within go-micro. Its a convenience method for building
+// and initialising services.
+type Service interface {
+    // The service name
+    Name() string
+    // Init initialises options
+    Init(...Option)
+    // Options returns the current options
+    Options() Options
+    // Client is used to call services
+    Client() client.Client
+    // Server is for handling requests and events
+    Server() server.Server
+    // Run the service
+    Run() error
+    // The service implementation
+    String() string
+}
+```
+
+上面函数 `NewService()` 里标 `<1>` 内容：`newService(opts...)`，这个 `newService()` 函数位于github.com\micro\go-micro\v2\service.go：
+```Go
+func newService(opts ...Option) Service {
+    service := new(service) // <2>
+    options := newOptions(opts...)
+
+    // service name
+    serviceName := options.Server.Options().Name
+
+    // we pass functions to the wrappers since the values can change during initialisation
+    authFn := func() auth.Auth { return options.Server.Options().Auth }
+    cacheFn := func() *client.Cache { return options.Client.Options().Cache }
+
+    // wrap client to inject From-Service header on any calls
+    options.Client = wrapper.FromService(serviceName, options.Client)
+    options.Client = wrapper.TraceCall(serviceName, trace.DefaultTracer, options.Client)
+    options.Client = wrapper.CacheClient(cacheFn, options.Client)
+    options.Client = wrapper.AuthClient(authFn, options.Client)
+
+    // wrap the server to provide handler stats
+    options.Server.Init(
+        server.WrapHandler(wrapper.HandlerStats(stats.DefaultStats)),
+        server.WrapHandler(wrapper.TraceHandler(trace.DefaultTracer)),
+        server.WrapHandler(wrapper.AuthHandler(authFn)),
+    )
+
+    // set opts
+    service.opts = options
+
+    return service
+}
+```
+
+上面函数 `newService()` 里标 `<2>`  地方的内容 `service := new(service)` ， 这段代码里的 `service`，
+它是一个结构体 struct，位于 github.com\micro\go-micro\v2\service.go
+```Go
+type service struct {     
+    opts Options     // <3>
+    once sync.Once
+}
+```
+
+service 结构体里面的 `Options`  (标 <3> 地方) 位于 github.com\micro\go-micro\v2\options.go 中，包含了很多 interface，比如 `Server`，`Client`， `Registry` 等等接口，
+```Go
+// Options for micro service
+type Options struct {
+    Auth      auth.Auth
+    Broker    broker.Broker
+    Cmd       cmd.Cmd
+    Config    config.Config
+    Client    client.Client
+    Server    server.Server
+    Store     store.Store
+    Registry  registry.Registry
+    Runtime   runtime.Runtime
+    Transport transport.Transport
+    Profile   profile.Profile
+
+    // Before and After funcs
+    BeforeStart []func() error
+    BeforeStop  []func() error
+    AfterStart  []func() error
+    AfterStop   []func() error
+
+    // Other options for implementations of the interface
+    // can be stored in a context
+    Context context.Context
+
+    Signal bool
+}
+```
+> 从上面的代码分析可以看出：**Service** 把其他核心接口有机的组织在一起，然后协调运行。
+
+### Plugins
 
 Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) 仓库，用于维护 Go Micro 核心接口支持的可替换插件：
 
