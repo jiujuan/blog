@@ -6,6 +6,10 @@
 - [微服务架构学习与思考(03)：微服务总体架构图解](https://www.cnblogs.com/jiujuan/p/13295147.html)
 - [微服务架构学习与思考(04)：微服务技术体系](https://www.cnblogs.com/jiujuan/p/13301055.html)
 
+### go-micro 微服务实践
+
+- [go-micro微服务实战(1)-Micro微服务框架介绍](https://github.com/jiujuan/zenblog/blob/master/content/go-micro-learning-part-one.md)
+
 
 
 ## gRPC 学习
