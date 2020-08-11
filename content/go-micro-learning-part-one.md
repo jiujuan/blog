@@ -115,8 +115,8 @@ SRV服务是标准的RPC服务，是你通常编写的服务类型。通常称�
 go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它用于分布式系统开发。这个插件抽象出了分布式系统的细节。
 ![three](../images/go-micro-arch-program-03.png)
 
-- 最顶层的 Service 接口是构建服务的主要组件，它把底层的各个包需要实现的接口，做了一次封装，包含了一系列用于初始化 Service 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
-- Client 是请求服务的接口，从 Registry 中获取 Server 信息，然后封装了 Transport 和 Codec 进行 RPC 调用，也封装了 Brocker 进行消息发布，默认通过 RPC 协议进行通信，也可以基于 HTTP 或 gRPC；
+- Service 最顶层的 Service 接口是构建服务的主要组件，它把底层的各个包需要实现的接口，做了一次封装，包含了一系列用于初始化 Service 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
+- Client 是请求服务的接口，从 Registry 中获取 Server 信息，然后封装了 Transport 和 Codec 进行 RPC 调用，也封装了 Broker 进行消息发布，默认通过 RPC 协议进行通信，也可以基于 HTTP 或 gRPC；
 
 - Server 是监听服务调用的接口，也将以接收 Broker 推送过来的消息，需要向 Registry 注册自己的存在与否，以便客户端发起请求，和 Client 一样，默认基于 RPC 协议通信，也可以替换为 HTTP 或 gRPC；
 - Broker 是消息发布和订阅的接口，默认实现是基于 HTTP，在生产环境可以替换为 Kafka、RabbitMQ 等其他组件实现；
