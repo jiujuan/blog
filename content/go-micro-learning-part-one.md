@@ -1,7 +1,7 @@
 ## 一、Micro
 
 ### 架构图
-![go-micro-img-one](./images/go-micro-arch-01.png)
+![go-micro-img-one](../images/go-micro-arch-01.png)
 
  Micro 是一个平台，它使用可插拔的基础和强定义的 api 来解决这些问题。可插入任何堆栈或云.
 
@@ -93,7 +93,7 @@ go.micro.web
 
 ### API，Web和SRV服务之间的区别是什么？
 先看一张图：
-![go-micro-img-two](./images/go-micro-api-srv-web-02.png)
+![go-micro-img-two](../images/go-micro-api-srv-web-02.png)
 
 作为 micro 工具包的一部分, 我们尝试通过分离 API, Web 仪表板和后端服务 (SRV） 的关注点, 为可扩展体系结构定义一组设计模式.
 
@@ -113,7 +113,7 @@ SRV服务是标准的RPC服务，是你通常编写的服务类型。通常称�
 
 ### 什么是Go-Micro
 go-micro是一个微服务开发的框架，是一个插件式的RPC框架。它用于分布式系统开发。这个插件抽象出了分布式系统的细节。
-![three](./images/go-micro-arch-program-03.png)
+![three](../images/go-micro-arch-program-03.png)
 
 - 最顶层的 Service 接口是构建服务的主要组件，它把底层的各个包需要实现的接口，做了一次封装，包含了一系列用于初始化 Service 和 Client 的方法，使我们可以很简单的创建一个 RPC 服务；
 - Client 是请求服务的接口，从 Registry 中获取 Server 信息，然后封装了 Transport 和 Codec 进行 RPC 调用，也封装了 Brocker 进行消息发布，默认通过 RPC 协议进行通信，也可以基于 HTTP 或 gRPC；
@@ -139,7 +139,7 @@ Go Micro 官方创建了一个 [Plugins](https://github.com/micro/go-plugins) �
 | Wrapper   | 中间件：熔断、限流、追踪、监控       |
 
 各个组件接口之间的关系可以通过下图串联：
-![four-image](./images/go-micro-srv-componets-04.png)
+![four-image](../images/go-micro-srv-componets-04.png)
 
 
 ## Go-Micro 学习资源
