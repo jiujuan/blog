@@ -5,6 +5,7 @@
 - [微服务架构学习与思考(02)：微服务实施前有哪些问题需要思考？](https://www.cnblogs.com/jiujuan/p/13284412.html)
 - [微服务架构学习与思考(03)：微服务总体架构图解](https://www.cnblogs.com/jiujuan/p/13295147.html)
 - [微服务架构学习与思考(04)：微服务技术体系](https://www.cnblogs.com/jiujuan/p/13301055.html)
+- [微服务架构学习与思考(05)：微服务架构适用场景分析](https://www.cnblogs.com/jiujuan/p/13762969.html)
 
 ### go-micro 微服务实践
 
