@@ -40,3 +40,6 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## 深入理解golang
 - [深入理解golang：Context](https://www.cnblogs.com/jiujuan/p/13795723.html)
+
+## golang常用库使用
+- [golang常用库：字段参数验证库-validator使用](https://www.cnblogs.com/jiujuan/p/13823864.html)
