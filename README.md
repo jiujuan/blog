@@ -13,6 +13,7 @@
 - [微服务架构学习与思考(06)：如何构建微服务？](https://www.cnblogs.com/jiujuan/p/14070123.html)
 - [微服务架构学习与思考(07)：企业团队组织架构如何变革？](https://www.cnblogs.com/jiujuan/p/14321594.html)
 - [微服务架构学习与思考(08)：服务注册中心（服务注册与服务发现）](https://www.cnblogs.com/jiujuan/p/15087196.html)
+- [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
 
 ### go-micro 微服务实践
 
