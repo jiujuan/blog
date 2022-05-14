@@ -51,3 +51,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## golang常用库使用
 - [golang常用库：字段参数验证库-validator使用](https://www.cnblogs.com/jiujuan/p/13823864.html)
+- [golang常用库：操作数据库的orm框架-gorm基本使用](https://www.cnblogs.com/jiujuan/p/12676195.html)
+- [golang常用库：gorilla/mux-http路由库使用](https://www.cnblogs.com/jiujuan/p/12768907.html)
+- [golang常用库：配置文件解析库/管理工具-viper使用](https://www.cnblogs.com/jiujuan/p/13799976.html)
+- [golang常用库包：http和API客户端请求库-go-resty](https://www.cnblogs.com/jiujuan/p/14583605.html)
+- [golang常用库包：cli命令行/应用程序生成工具-cobra使用](https://www.cnblogs.com/jiujuan/p/15487918.html)
+- [golang常用库包：日志记录库-logrus使用](https://www.cnblogs.com/jiujuan/p/15542743.html)
+- [golang常用库包：Go依赖注入(DI)工具-wire使用](https://www.cnblogs.com/jiujuan/p/16136633.html)
