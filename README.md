@@ -58,3 +58,6 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：cli命令行/应用程序生成工具-cobra使用](https://www.cnblogs.com/jiujuan/p/15487918.html)
 - [golang常用库包：日志记录库-logrus使用](https://www.cnblogs.com/jiujuan/p/15542743.html)
 - [golang常用库包：Go依赖注入(DI)工具-wire使用](https://www.cnblogs.com/jiujuan/p/16136633.html)
+
+## 管理相关
+- [聊一聊向上管理](https://www.cnblogs.com/jiujuan/p/16611584.html)
