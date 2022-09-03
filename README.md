@@ -15,6 +15,9 @@
 - [微服务架构学习与思考(08)：服务注册中心（服务注册与服务发现）](https://www.cnblogs.com/jiujuan/p/15087196.html)
 - [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
 
+### go-kratos 实战系列
+- [Go微服务框架go-kratos学习01-quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
+
 ### go-micro 微服务实践
 
 - [golang微服务框架go-micro学习(01)-Micro微服务框架整体介绍](https://github.com/jiujuan/zenblog/blob/master/content/go-micro-learning-part-one.md)
