@@ -64,3 +64,6 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## 管理相关
 - [聊一聊向上管理](https://www.cnblogs.com/jiujuan/p/16611584.html)
+
+## java学习
+-[java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
