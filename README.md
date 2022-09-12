@@ -16,7 +16,12 @@
 - [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
 
 ### go-kratos 实战系列
-- [Go微服务框架go-kratos学习01-quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
+- [Go微服务框架go-kratos实战学习01-quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
+- [Go微服务框架go-kratos实战学习02：proto 代码生成和项目代码编写步骤](https://www.cnblogs.com/jiujuan/p/16331967.html)
+- [Go微服务框架go-kratos实战学习03：使用 gorm 实现增删改查操作](https://www.cnblogs.com/jiujuan/p/16338305.html)
+- [Go微服务框架go-kratos实战学习04：服务注册和服务发现(etcd作为注册中心)](https://www.cnblogs.com/jiujuan/p/16341183.html)
+- [Go微服务框架go-kratos实战学习05：分布式链路追踪 OpenTelemetry 使用](https://www.cnblogs.com/jiujuan/p/16349519.html)
+- [Go微服务框架go-kratos实战学习06：配置使用-file和nacos配置中心](https://www.cnblogs.com/jiujuan/p/16498072.html)
 
 ### go-micro 微服务实践
 
