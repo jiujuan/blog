@@ -15,6 +15,10 @@
 - [微服务架构学习与思考(08)：服务注册中心（服务注册与服务发现）](https://www.cnblogs.com/jiujuan/p/15087196.html)
 - [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
 
+### 服务治理
+- [服务治理：常用限流算法总结](https://www.cnblogs.com/jiujuan/p/16264022.html)
+- [服务治理：几种开源限流算法库/应用软件介绍和使用](https://www.cnblogs.com/jiujuan/p/16283141.html)
+
 ### go-kratos 实战系列
 - [Go微服务框架go-kratos实战学习01-quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
 - [Go微服务框架go-kratos实战学习02：proto 代码生成和项目代码编写步骤](https://www.cnblogs.com/jiujuan/p/16331967.html)
