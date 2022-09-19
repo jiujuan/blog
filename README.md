@@ -75,6 +75,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## 管理相关
 - [聊一聊向上管理](https://www.cnblogs.com/jiujuan/p/16611584.html)
+- [技术管理的一些理念](https://www.cnblogs.com/jiujuan/p/14682355.html)
+
+- [碎碎念软件研发01：敏捷简史和几种软件开发模型](https://www.cnblogs.com/jiujuan/p/16294276.html)
+- [碎碎念软件研发02：敏捷之Scrum](https://www.cnblogs.com/jiujuan/p/16319726.html)
 
 ## java学习
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
