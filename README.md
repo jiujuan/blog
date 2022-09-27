@@ -59,9 +59,17 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [docker学习(5)-常用命令](./content/learning-docker-5.md)
 
 ## 深入理解golang
-- [深入理解golang：Context](https://www.cnblogs.com/jiujuan/p/13795723.html)
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
 - [深入理解Go语言(02): channels - kavya Joshi](https://www.cnblogs.com/jiujuan/p/12026551.html)
+- [深入理解Go语言(03)：scheduler调度器 - 基本介绍](https://www.cnblogs.com/jiujuan/p/12735559.html)
+- [深入理解Go语言(04)：scheduler调度器-GPM源码分析](https://www.cnblogs.com/jiujuan/p/12977832.html)
+- [深入理解Go语言(05)：sync.map原理分析](https://www.cnblogs.com/jiujuan/p/13365901.html)
+- [深入理解Go语言(06)：Context原理分析](https://www.cnblogs.com/jiujuan/p/13795723.html)
+- [TCMalloc 内存分配原理简析](https://www.cnblogs.com/jiujuan/p/13922551.html)
+- [深入理解Go语言(07)：内存分配原理](https://www.cnblogs.com/jiujuan/p/13922551.html)
+- [深入理解Go语言(08)：sync.WaitGroup源码分析](https://www.cnblogs.com/jiujuan/p/16735012.html)
+
+- [Golang 汇编asm语言基础学习](https://www.cnblogs.com/jiujuan/p/16555192.html)
 
 ## golang常用库使用
 - [golang常用库：字段参数验证库-validator使用](https://www.cnblogs.com/jiujuan/p/13823864.html)
