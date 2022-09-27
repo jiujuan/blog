@@ -90,6 +90,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## java学习
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
+- [SpringBoot 配置文件使用详解](https://www.cnblogs.com/jiujuan/p/16700983.html)
 
 ## Redis
 - [Redis服务端事件处理流程分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
