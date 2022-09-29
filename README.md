@@ -57,6 +57,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## 系统和其他
 - [到底什么是锁？](./content/what-is-lock-1.md)
 - [docker学习(5)-常用命令](./content/learning-docker-5.md)
+- [服务端高性能网络IO编程模型简析](https://www.cnblogs.com/jiujuan/p/16586900.html)
+- [linux和unix中的IO模型总结](https://www.cnblogs.com/jiujuan/p/16564610.html)
 
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
