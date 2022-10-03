@@ -95,4 +95,11 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [SpringBoot 配置文件使用详解](https://www.cnblogs.com/jiujuan/p/16700983.html)
 
 ## Redis原理学习
+- [Redis原理学习：Redis主体流程分析](https://www.cnblogs.com/jiujuan/p/12884938.html)
 - [Redis服务端事件处理流程分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
+- [Redis原理再学习01：数据结构-跳跃表skiplist](https://www.cnblogs.com/jiujuan/p/12884824.html)
+- [Redis原理再学习02：数据结构-动态字符串sds](https://www.cnblogs.com/jiujuan/p/15828302.html)
+- [Redis原理再学习03：数据结构-链表 list](https://www.cnblogs.com/jiujuan/p/15839269.html)
+- [Redis原理再学习04：数据结构-哈希表hash表(dict字典)](https://www.cnblogs.com/jiujuan/p/15944061.html)
+- [Redis原理再学习05：数据结构-整数集合intset](https://www.cnblogs.com/jiujuan/p/15993249.html)
+
