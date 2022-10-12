@@ -102,4 +102,5 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [Redis原理再学习03：数据结构-链表 list](https://www.cnblogs.com/jiujuan/p/15839269.html)
 - [Redis原理再学习04：数据结构-哈希表hash表(dict字典)](https://www.cnblogs.com/jiujuan/p/15944061.html)
 - [Redis原理再学习05：数据结构-整数集合intset](https://www.cnblogs.com/jiujuan/p/15993249.html)
+- [Redis高可用之主从复制原理演进分析](https://www.cnblogs.com/jiujuan/p/16784964.html)
 
