@@ -83,16 +83,35 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：日志记录库-logrus使用](https://www.cnblogs.com/jiujuan/p/15542743.html)
 - [golang常用库包：Go依赖注入(DI)工具-wire使用](https://www.cnblogs.com/jiujuan/p/16136633.html)
 
-## 管理相关
+## 管理-产品相关
+
+### 管理
 - [聊一聊向上管理](https://www.cnblogs.com/jiujuan/p/16611584.html)
 - [技术管理的一些理念](https://www.cnblogs.com/jiujuan/p/14682355.html)
+- [技术人怎么“打通”产品业务？](https://www.cnblogs.com/jiujuan/p/13467196.html)
 
 - [碎碎念软件研发01：敏捷简史和几种软件开发模型](https://www.cnblogs.com/jiujuan/p/16294276.html)
 - [碎碎念软件研发02：敏捷之Scrum](https://www.cnblogs.com/jiujuan/p/16319726.html)
 
+- [如何多角度思考问题？](https://www.cnblogs.com/jiujuan/p/15717510.html)
+- [聊一聊结构化思维](https://www.cnblogs.com/jiujuan/p/13364052.html)
+- [反思：进步的“魔镜”](https://www.cnblogs.com/jiujuan/p/11995383.html)
+
+- [技术人沟通中的几个常见问题分析和解答](https://www.cnblogs.com/jiujuan/p/13842338.html)
+
+
+### 产品
+- [用价值链分析法: 分析软件开发的价值定位、赋能及创业杂感](https://www.cnblogs.com/jiujuan/p/13676593.html)
+- [九卷读书：《产品设计思维：电商产品设计全攻略》读书笔记](https://www.cnblogs.com/jiujuan/p/14452748.html)
+- [九卷读书：《跨越鸿沟》-产品和技术生命周期一点思考](https://www.cnblogs.com/jiujuan/p/12884881.html)
+
+## 学习成长
+- [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
+
 ## java学习
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
 - [SpringBoot 配置文件使用详解](https://www.cnblogs.com/jiujuan/p/16700983.html)
+- [SpringBoot学习-图文并茂写Hello World](https://www.cnblogs.com/jiujuan/p/11654567.html)
 
 ## Redis原理学习
 - [Redis原理学习：Redis主体流程分析](https://www.cnblogs.com/jiujuan/p/12884938.html)
