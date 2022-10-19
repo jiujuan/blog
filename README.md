@@ -104,6 +104,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [如何多角度思考问题？](https://www.cnblogs.com/jiujuan/p/15717510.html)
 - [聊一聊结构化思维](https://www.cnblogs.com/jiujuan/p/13364052.html)
 - [反思：进步的“魔镜”](https://www.cnblogs.com/jiujuan/p/11995383.html)
+- [工作中常用的方法(思维模型)](https://www.cnblogs.com/jiujuan/p/13394703.html)
 
 - [技术人沟通中的几个常见问题分析和解答](https://www.cnblogs.com/jiujuan/p/13842338.html)
 
@@ -112,6 +113,9 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [用价值链分析法: 分析软件开发的价值定位、赋能及创业杂感](https://www.cnblogs.com/jiujuan/p/13676593.html)
 - [九卷读书：《产品设计思维：电商产品设计全攻略》读书笔记](https://www.cnblogs.com/jiujuan/p/14452748.html)
 - [九卷读书：《跨越鸿沟》-产品和技术生命周期一点思考](https://www.cnblogs.com/jiujuan/p/12884881.html)
+- [九卷读书[产品]：产品的视角-产品思维框架](https://www.cnblogs.com/jiujuan/p/11663782.html)
+- [九卷读书[产品]: 产品的视角-产品经理能力模型](https://www.cnblogs.com/jiujuan/p/11627990.html)
+- [[产品]：腾讯8分钟产品课](https://www.cnblogs.com/jiujuan/p/12173264.html)
 
 ## 学习成长
 - [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
