@@ -1,4 +1,4 @@
-[我的博客地址](https://www.cnblogs.com/jiujuan/) https://www.cnblogs.com/jiujuan/
+更多文章请看[我的博客地址](https://www.cnblogs.com/jiujuan/)： https://www.cnblogs.com/jiujuan/
 
 ## 云原生
 
@@ -92,6 +92,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：cli命令行/应用程序生成工具-cobra使用](https://www.cnblogs.com/jiujuan/p/15487918.html)
 - [golang常用库包：日志记录库-logrus使用](https://www.cnblogs.com/jiujuan/p/15542743.html)
 - [golang常用库包：Go依赖注入(DI)工具-wire使用](https://www.cnblogs.com/jiujuan/p/16136633.html)
+
+- [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
 
 ## 管理-产品相关
 
