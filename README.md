@@ -16,6 +16,7 @@
 - [微服务架构学习与思考(07)：企业团队组织架构如何变革？](https://www.cnblogs.com/jiujuan/p/14321594.html)
 - [微服务架构学习与思考(08)：服务注册中心（服务注册与服务发现）](https://www.cnblogs.com/jiujuan/p/15087196.html)
 - [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
+- [微服务架构学习与思考(10)：微服务网关和开源 API 网关01-以 Nginx 为基础的 API 网关详细介绍](https://www.cnblogs.com/jiujuan/p/16810290.html)
 
 ### 服务治理
 - [服务治理：常用限流算法总结](https://www.cnblogs.com/jiujuan/p/16264022.html)
