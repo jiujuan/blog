@@ -96,6 +96,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
 
+## Go 开发规范
+- [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
+- [Uber Go 编码规范](https://www.cnblogs.com/jiujuan/p/15568018.html)
+
 ## 管理-产品相关
 
 ### 管理
