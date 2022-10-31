@@ -30,6 +30,9 @@
 - [Go微服务框架go-kratos实战学习05：分布式链路追踪 OpenTelemetry 使用](https://www.cnblogs.com/jiujuan/p/16349519.html)
 - [Go微服务框架go-kratos实战学习06：配置使用-file和nacos配置中心](https://www.cnblogs.com/jiujuan/p/16498072.html)
 
+### go-kratos 分析
+- [Golang微服务框架go-kratos分析：框架架构分析](https://www.cnblogs.com/jiujuan/p/16845565.html)
+
 ### go-micro 微服务实践
 
 - [golang微服务框架go-micro学习(01)-Micro微服务框架整体介绍](https://github.com/jiujuan/zenblog/blob/master/content/go-micro-learning-part-one.md)
