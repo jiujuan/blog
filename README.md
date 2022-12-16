@@ -145,4 +145,5 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## 协议
 - [HTTP2 协议长文详解](https://www.cnblogs.com/jiujuan/p/16939688.html)
+- [WebSocket 协议详解](https://www.cnblogs.com/jiujuan/p/16174566.html)
 
