@@ -18,6 +18,7 @@
 - [微服务架构学习与思考(09)：分布式链路追踪系统-dapper论文学习](https://www.cnblogs.com/jiujuan/p/16097314.html)
 - [微服务架构学习与思考(10)：微服务网关和开源 API 网关01-以 Nginx 为基础的 API 网关详细介绍](https://www.cnblogs.com/jiujuan/p/16810290.html)
 - [微服务架构学习与思考(11)：开源 API 网关02-以 Java 为基础的 API 网关详细介绍](https://www.cnblogs.com/jiujuan/p/16814545.html)
+- [微服务架构学习与思考(12)：从单体架构到微服务架构的演进历程](https://www.cnblogs.com/jiujuan/p/17066590.html)
 
 ### 服务治理
 - [服务治理：常用限流算法总结](https://www.cnblogs.com/jiujuan/p/16264022.html)
