@@ -1,8 +1,9 @@
 更多文章请看：[我的博客](https://www.cnblogs.com/jiujuan/)： https://www.cnblogs.com/jiujuan/
 
-## 云原生
+## 云原生和kubernetes
 
 - [云原生学习101-云原生概览](https://github.com/jiujuan/zenblog/blob/master/content/cloud-native-learning-intro-101-1.md)
+- [kubernetes(k8s)基础学习-kubernetes是什么？有什么用？](https://www.cnblogs.com/jiujuan/p/17107088.html)
 
 ## 微服务
 
