@@ -142,7 +142,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## 学习成长
 - [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
 
-## java学习
+## java
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
 - [SpringBoot 配置文件使用详解](https://www.cnblogs.com/jiujuan/p/16700983.html)
 - [SpringBoot学习-图文并茂写Hello World](https://www.cnblogs.com/jiujuan/p/11654567.html)
