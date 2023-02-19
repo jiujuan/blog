@@ -28,7 +28,7 @@
 - [服务治理：几种开源限流算法库/应用软件介绍和使用](https://www.cnblogs.com/jiujuan/p/16283141.html)
 
 ### go-kratos 微服务实战系列
-- [Go微服务框架go-kratos实战学习01-quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
+- [Go微服务框架go-kratos实战学习01：quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
 - [Go微服务框架go-kratos实战学习02：proto 代码生成和项目代码编写步骤](https://www.cnblogs.com/jiujuan/p/16331967.html)
 - [Go微服务框架go-kratos实战学习03：使用 gorm 实现增删改查操作](https://www.cnblogs.com/jiujuan/p/16338305.html)
 - [Go微服务框架go-kratos实战学习04：服务注册和服务发现(etcd作为注册中心)](https://www.cnblogs.com/jiujuan/p/16341183.html)
