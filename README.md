@@ -109,8 +109,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
 
-## Go 标准库
+## Go 标准库和其他
 - [Go 中的反射 reflect 介绍和基本使用](https://www.cnblogs.com/jiujuan/p/17142703.html)
+
+- [Go语言并发编程(1)：对多进程、多线程、协程和并发、并行的理解](https://www.cnblogs.com/jiujuan/p/17151595.html)
 
 ## Go 开发规范
 - [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
