@@ -36,6 +36,8 @@
 - [Go微服务框架go-kratos实战学习06：配置使用-file和nacos配置中心](https://www.cnblogs.com/jiujuan/p/16498072.html)
 - [Go微服务框架go-kratos实战学习07：consul 作为服务注册和发现中心](https://www.cnblogs.com/jiujuan/p/17196383.html)
 
+> [go-kratos实战代码地址](https://github.com/jiujuan/go-kratos-demos)
+
 ### go-kratos 分析
 - [Golang微服务框架go-kratos分析：框架架构分析](https://www.cnblogs.com/jiujuan/p/16845565.html)
 
