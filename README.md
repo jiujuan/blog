@@ -117,6 +117,24 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [Go语言并发编程(1)：对多进程、多线程、协程和并发、并行的理解](https://www.cnblogs.com/jiujuan/p/17151595.html)
 
+## Gin Web 框架学习系列
+- [01-quickstart](https://github.com/jiujuan/gin-tutorial/blob/master/01quickstart/main.go)
+- [02-parameter](https://github.com/jiujuan/gin-tutorial/tree/master/02parameter)
+- [03-route](https://github.com/jiujuan/gin-tutorial/tree/master/03route)
+- [04-middleware](https://github.com/jiujuan/gin-tutorial/tree/master/04middleware)
+- [05-log](https://github.com/jiujuan/gin-tutorial/tree/master/05log)
+- [06-logrus](https://github.com/jiujuan/gin-tutorial/tree/master/06logrus)
+- [07-bind](https://github.com/jiujuan/gin-tutorial/tree/master/07bind)
+- [08-validate](https://github.com/jiujuan/gin-tutorial/tree/master/08validate)
+- [09-restful](https://github.com/jiujuan/gin-tutorial/tree/master/09gin-gorm-restful)
+- [10-blog](https://github.com/jiujuan/gin-tutorial/tree/master/10gin-blog)
+- [11-jwt](https://github.com/jiujuan/gin-tutorial/tree/master/11gin-jwt/demo1)
+- [12-shutdown/gracefull](https://github.com/jiujuan/gin-tutorial/tree/master/12shutdown/gracefull)
+- [13-livereload](https://github.com/jiujuan/gin-tutorial/tree/master/13livereload)
+- [14-swagger](https://github.com/jiujuan/gin-tutorial/tree/master/14swagger)
+- [15-vue-gorm](https://github.com/jiujuan/gin-tutorial/tree/master/15vue-gorm)
+- [16-hystrix-go](https://github.com/jiujuan/gin-tutorial/tree/master/16hystrix-go) hystrix-go和gin结合使用的demo
+
 ## Go 开发规范
 - [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
 - [Uber Go 编码规范](https://www.cnblogs.com/jiujuan/p/15568018.html)
