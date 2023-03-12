@@ -135,7 +135,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [15-vue-gorm](https://github.com/jiujuan/gin-tutorial/tree/master/15vue-gorm)
 - [16-hystrix-go](https://github.com/jiujuan/gin-tutorial/tree/master/16hystrix-go) hystrix-go和gin结合使用的demo
 
-## Go 开发规范
+## Go 开发规范(软件工程)
 - [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
 - [Uber Go 编码规范](https://www.cnblogs.com/jiujuan/p/15568018.html)
 
