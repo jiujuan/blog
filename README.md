@@ -25,7 +25,7 @@
 - [学习成长](#学习成长)
 - [java](#java)
 - [网络协议](#协议)
-- [其它](##其它)
+- [九卷读书](##九卷读书)
 
 
 ## 云原生和kubernetes
@@ -91,9 +91,12 @@
 - [Redis高可用之主从复制原理演进分析](https://www.cnblogs.com/jiujuan/p/16784964.html)
 - [Redis 缓存过期删除/淘汰策略分析](https://www.cnblogs.com/jiujuan/p/15765214.html)
 
+- [认识Redis持久化RDB、AOF和混合持久化](https://www.cnblogs.com/jiujuan/p/10877805.html)
 - [Redis复制原理](https://www.cnblogs.com/jiujuan/p/11278486.html)
 - [redis高可用集群-redis cluster(cluster集群)简介和配置（3）](https://www.cnblogs.com/jiujuan/p/10409600.html)
-- [认识Redis持久化RDB、AOF和混合持久化](https://www.cnblogs.com/jiujuan/p/10877805.html)
+- [redis高可用集群-sentinel哨兵高可用配置（2）](https://www.cnblogs.com/jiujuan/p/9091337.html)
+- [redis高可用集群-redis主从复制配置（1）](https://www.cnblogs.com/jiujuan/p/9071003.html)
+
 
 - [Redis 缓存常见问题：缓存穿透、缓存击穿和缓存雪崩](https://www.cnblogs.com/jiujuan/p/10441214.html)
 
@@ -135,7 +138,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 
 
-## 系统和其他
+## 操作系统和其他
 - [到底什么是锁？](./content/what-is-lock-1.md)
 - [基于Redis的分布式锁真的安全吗？](https://www.cnblogs.com/jiujuan/p/10595838.html)
 
@@ -147,6 +150,11 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [对进程、线程和协程的理解以及它们的区别](https://www.cnblogs.com/jiujuan/p/16193142.html)
 
 - [Linux内存管理](https://www.cnblogs.com/jiujuan/p/10712197.html)
+- [Linux进程的虚拟内存](https://www.cnblogs.com/jiujuan/p/12054748.html)
+- [Linux内存：物理内存管理概述](https://www.cnblogs.com/jiujuan/p/12054692.html)
+- [Linux进程: task_struct结构体成员](https://www.cnblogs.com/jiujuan/p/11715853.html)
+- [Linux进程：管理和调度](https://www.cnblogs.com/jiujuan/p/12040884.html)
+- [线程，进程和并发](https://www.cnblogs.com/jiujuan/p/8911898.html)
 
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
@@ -240,6 +248,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [碎碎念软件研发01：敏捷简史和几种软件开发模型](https://www.cnblogs.com/jiujuan/p/16294276.html)
 - [碎碎念软件研发02：敏捷之Scrum](https://www.cnblogs.com/jiujuan/p/16319726.html)
 
+- [如何提高团队管理能力？](https://www.cnblogs.com/jiujuan/p/9004708.html)
 - [如何多角度思考问题？](https://www.cnblogs.com/jiujuan/p/15717510.html)
 - [聊一聊结构化思维](https://www.cnblogs.com/jiujuan/p/13364052.html)
 - [反思：进步的“魔镜”](https://www.cnblogs.com/jiujuan/p/11995383.html)
@@ -252,9 +261,13 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [业务 产品 技术的一点看法](https://www.cnblogs.com/jiujuan/p/11080554.html)
 
 - [九卷读书：《带人的技术》](https://www.cnblogs.com/jiujuan/p/10891893.html)
+- [九卷读书：成为技术领导者 读书笔记 1](https://www.cnblogs.com/jiujuan/p/10269389.html)
 
 - [技术管理：技术管理者的多维度能力及成长路径](https://www.cnblogs.com/jiujuan/p/11222310.html)
 - [技术管理：项目开发中的几种风险管理](https://www.cnblogs.com/jiujuan/p/11493328.html)
+- [技术管理：团队建设](https://www.cnblogs.com/jiujuan/p/11316993.html)
+- [技术管理：项目管理概要](https://www.cnblogs.com/jiujuan/p/10597880.html)
+- [好的团队和差的团队（好的产品经理和差的产品经理）](https://www.cnblogs.com/jiujuan/p/10053961.html)
 
 
 ### 产品
@@ -270,6 +283,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## 学习成长
 - [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
 - [“我”这个程序员天天curd，怎么才能成长，职业生涯怎么发展？](https://www.cnblogs.com/jiujuan/p/13879947.html)
+- [《阿里感悟》- 技术人员的职业规划](https://www.cnblogs.com/jiujuan/p/9278742.html)
 
 ## java
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
@@ -281,8 +295,13 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [WebSocket 协议详解](https://www.cnblogs.com/jiujuan/p/16174566.html)
 - [TCP协议的流量控制和拥塞控制](https://www.cnblogs.com/jiujuan/p/12210218.html)
 - [TCP/IP的确认号,序列号和超时重传的学习笔记](https://www.cnblogs.com/jiujuan/p/12203836.html)
+- [(传输层)tcp协议](https://www.cnblogs.com/jiujuan/p/8988645.html)
+- [http协议简介](https://www.cnblogs.com/jiujuan/p/8867476.html)
 
-## 其它
+- [Linux网络协议栈(一)——Socket入门(1)](https://www.cnblogs.com/jiujuan/p/9388515.html)
+- [Linux网络协议栈(一)——Socket入门(2)](https://www.cnblogs.com/jiujuan/p/9388517.html)
+
+## 九卷读书
 
  - [九卷读书：《复盘-对过去的事情做思维演练》读书笔记](https://www.cnblogs.com/jiujuan/p/13209745.html)
  - [九卷读书：淘宝从小到大的发展 -重读《淘宝技术这十年》](https://www.cnblogs.com/jiujuan/p/13025386.html)
