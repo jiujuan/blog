@@ -7,25 +7,34 @@
   - [微服务架构思考系列](#微服务架构思考系列)
   - [Go 微服务实战系列](#go-kratos-微服务实战系列)
 - [Redis原理学习](#redis原理学习)
+- [MySQL](#mysql)
 - [架构](#架构)
 - [gRPC 学习](#grpc-学习)
 - [深入理解golang](#深入理解golang)
 - [系统和其他](#系统和其他)
 - [golang常用库包使用](#golang常用库包使用)
 - [Go 语言并发编程](#go-语言并发编程)
+- [Go 性能优化分析](#go-性能优化分析)
 - [Gin Web 框架学习系列](#gin-web-框架学习系列)
 - [Go 开发规范(软件工程)](#go-开发规范软件工程)
+- [消息队列](#消息队列)
+- [监控](#监控)
 - [管理-产品相关](#管理-产品相关)
   - [管理](#管理)
   - [产品](#产品)
 - [学习成长](#学习成长)
 - [java](#java)
 - [网络协议](#协议)
+- [其它](##其它)
+
 
 ## 云原生和kubernetes
 
 - [云原生学习101-云原生概览](https://github.com/jiujuan/zenblog/blob/master/content/cloud-native-learning-intro-101-1.md)
 - [云原生概览](https://www.cnblogs.com/jiujuan/p/16158019.html)
+
+- [Docker常用命令总结](https://www.cnblogs.com/jiujuan/p/13758351.html)
+
 - [kubernetes(k8s)基础学习-kubernetes是什么？有什么用？](https://www.cnblogs.com/jiujuan/p/17107088.html)
 
 ## 微服务
@@ -61,6 +70,9 @@
 
 > [go-kratos实战代码地址](https://github.com/jiujuan/go-kratos-demos)
 
+- [golang微服务实践：分布式链路追踪系统-jaeger安装与简单使用](https://www.cnblogs.com/jiujuan/p/13235748.html)
+- [golang微服务实践：服务注册与服务发现 - Etcd的使用](https://www.cnblogs.com/jiujuan/p/13200898.html)
+
 ### go-kratos 分析
 - [Golang微服务框架go-kratos分析：框架架构分析](https://www.cnblogs.com/jiujuan/p/16845565.html)
 
@@ -77,11 +89,30 @@
 - [Redis原理再学习04：数据结构-哈希表hash表(dict字典)](https://www.cnblogs.com/jiujuan/p/15944061.html)
 - [Redis原理再学习05：数据结构-整数集合intset](https://www.cnblogs.com/jiujuan/p/15993249.html)
 - [Redis高可用之主从复制原理演进分析](https://www.cnblogs.com/jiujuan/p/16784964.html)
+- [Redis 缓存过期删除/淘汰策略分析](https://www.cnblogs.com/jiujuan/p/15765214.html)
+
+- [Redis复制原理](https://www.cnblogs.com/jiujuan/p/11278486.html)
+- [redis高可用集群-redis cluster(cluster集群)简介和配置（3）](https://www.cnblogs.com/jiujuan/p/10409600.html)
+- [认识Redis持久化RDB、AOF和混合持久化](https://www.cnblogs.com/jiujuan/p/10877805.html)
+
+- [Redis 缓存常见问题：缓存穿透、缓存击穿和缓存雪崩](https://www.cnblogs.com/jiujuan/p/10441214.html)
+
+- [阿里云Redis开发规范](https://www.cnblogs.com/jiujuan/p/10441225.html)
+
+## MySQL
+- [如果有人问你数据库的原理，叫他看这篇文章](https://www.cnblogs.com/jiujuan/p/10676119.html)
+
+- [MySQL InnoDB存储引擎大观](https://www.cnblogs.com/jiujuan/p/11336049.html)
+- [五大常见的MySQL高可用方案](https://www.cnblogs.com/jiujuan/p/10907854.html)
 
 ## 架构
 - [了解企业架构EA(Enterprise Architecture)](https://www.cnblogs.com/jiujuan/p/16871889.html)
 
 - [分层架构设计总结](https://www.cnblogs.com/jiujuan/p/16880756.html)
+
+- [《恰如其分的软件架构》笔记摘要](https://www.cnblogs.com/jiujuan/p/13594006.html)
+
+- [RESTful API 介绍，设计](https://www.cnblogs.com/jiujuan/p/12791574.html)
 
 ## gRPC 学习
 
@@ -106,10 +137,16 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 ## 系统和其他
 - [到底什么是锁？](./content/what-is-lock-1.md)
-- [docker学习(5)-常用命令](./content/learning-docker-5.md)
+- [基于Redis的分布式锁真的安全吗？](https://www.cnblogs.com/jiujuan/p/10595838.html)
+
+- [etcd实现分布式锁分析](https://www.cnblogs.com/jiujuan/p/12147809.html)
+- [consul实现分布式锁](https://www.cnblogs.com/jiujuan/p/10527786.html)
+
 - [服务端高性能网络IO编程模型简析](https://www.cnblogs.com/jiujuan/p/16586900.html)
 - [linux和unix中的IO模型总结](https://www.cnblogs.com/jiujuan/p/16564610.html)
 - [对进程、线程和协程的理解以及它们的区别](https://www.cnblogs.com/jiujuan/p/16193142.html)
+
+- [Linux内存管理](https://www.cnblogs.com/jiujuan/p/10712197.html)
 
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
@@ -124,6 +161,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [Golang 汇编asm语言基础学习](https://www.cnblogs.com/jiujuan/p/16555192.html)
 
+- [go http server 编程实践及源码分析](https://www.cnblogs.com/jiujuan/p/11762587.html)
+
 ## golang常用库包使用
 - [golang常用库：字段参数验证库-validator使用](https://www.cnblogs.com/jiujuan/p/13823864.html)
 - [golang常用库：操作数据库的orm框架-gorm基本使用](https://www.cnblogs.com/jiujuan/p/12676195.html)
@@ -137,6 +176,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：redis操作库go-redis使用(02)-Redis5种基本数据类型操作](https://www.cnblogs.com/jiujuan/p/17215125.html)
 - [golang常用库包：redis操作库go-redis使用(03)-高级数据结构和其它特性](https://www.cnblogs.com/jiujuan/p/17231723.html)
 
+- [Go package(3)：io包介绍和使用](Go package(3)：io包介绍和使用)
+
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
 - [Go 中的反射 reflect 介绍和基本使用](https://www.cnblogs.com/jiujuan/p/17142703.html)
 
@@ -146,6 +187,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [Go语言并发编程(3)：sync包介绍和使用(上)-Mutex,RWMutex,WaitGroup,sync.Map](https://www.cnblogs.com/jiujuan/p/17248551.html)
 - [Go语言并发编程(4)：sync包介绍和使用(下)-Once,Pool,Cond](https://www.cnblogs.com/jiujuan/p/17248552.html)
 
+## Go 性能优化分析
+- [golang 性能优化分析工具 pprof (上) - 基础使用介绍](https://www.cnblogs.com/jiujuan/p/14588185.html)
+- [golang 性能优化分析工具 pprof（下）- web 服务分析](https://www.cnblogs.com/jiujuan/p/14598141.html)
+- [golang 性能优化分析：benchmark 结合 pprof](https://www.cnblogs.com/jiujuan/p/14604609.html)
 
 ## Gin Web 框架学习系列
 - [01-quickstart](https://github.com/jiujuan/gin-tutorial/blob/master/01quickstart/main.go)
@@ -169,9 +214,21 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [一步一步分析Gin框架路由源码及radix tree基数树](https://www.cnblogs.com/jiujuan/p/15973485.html)
 
+- [golang程序设计：Go middleware中间件以及Gin 中间件分析](https://www.cnblogs.com/jiujuan/p/13069995.html)
+
 ## Go 开发规范(软件工程)
 - [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
 - [Uber Go 编码规范](https://www.cnblogs.com/jiujuan/p/15568018.html)
+
+## 消息队列
+- [消息队列常见问题分析](https://www.cnblogs.com/jiujuan/p/13732880.html)
+
+- [kafka学习笔记01-kafka简介和架构介绍](https://www.cnblogs.com/jiujuan/p/15024642.html)
+- [kafka学习笔记02-kafka消息存储](https://www.cnblogs.com/jiujuan/p/15024666.html)
+- [kafka学习笔记03-消息生产者producer](https://www.cnblogs.com/jiujuan/p/15055979.html)
+
+## 监控
+- [Prometheus监控+Grafana+Alertmanager告警安装使用 (图文详解)](https://www.cnblogs.com/jiujuan/p/13262380.html)
 
 ## 管理-产品相关
 
@@ -190,6 +247,15 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [技术人沟通中的几个常见问题分析和解答](https://www.cnblogs.com/jiujuan/p/13842338.html)
 
+- [用价值链分析法: 分析软件开发的价值定位、赋能及创业杂感](https://www.cnblogs.com/jiujuan/p/13676593.html)
+
+- [业务 产品 技术的一点看法](https://www.cnblogs.com/jiujuan/p/11080554.html)
+
+- [九卷读书：《带人的技术》](https://www.cnblogs.com/jiujuan/p/10891893.html)
+
+- [技术管理：技术管理者的多维度能力及成长路径](https://www.cnblogs.com/jiujuan/p/11222310.html)
+- [技术管理：项目开发中的几种风险管理](https://www.cnblogs.com/jiujuan/p/11493328.html)
+
 
 ### 产品
 - [用价值链分析法: 分析软件开发的价值定位、赋能及创业杂感](https://www.cnblogs.com/jiujuan/p/13676593.html)
@@ -199,8 +265,11 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [九卷读书[产品]: 产品的视角-产品经理能力模型](https://www.cnblogs.com/jiujuan/p/11627990.html)
 - [[产品]：腾讯8分钟产品课](https://www.cnblogs.com/jiujuan/p/12173264.html)
 
+- [需求一直做不完，怎么办？](https://www.cnblogs.com/jiujuan/p/11953572.html)
+
 ## 学习成长
 - [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
+- [“我”这个程序员天天curd，怎么才能成长，职业生涯怎么发展？](https://www.cnblogs.com/jiujuan/p/13879947.html)
 
 ## java
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
@@ -210,4 +279,15 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## 协议
 - [HTTP2 协议长文详解](https://www.cnblogs.com/jiujuan/p/16939688.html)
 - [WebSocket 协议详解](https://www.cnblogs.com/jiujuan/p/16174566.html)
+- [TCP协议的流量控制和拥塞控制](https://www.cnblogs.com/jiujuan/p/12210218.html)
+- [TCP/IP的确认号,序列号和超时重传的学习笔记](https://www.cnblogs.com/jiujuan/p/12203836.html)
+
+## 其它
+
+ - [九卷读书：《复盘-对过去的事情做思维演练》读书笔记](https://www.cnblogs.com/jiujuan/p/13209745.html)
+ - [九卷读书：淘宝从小到大的发展 -重读《淘宝技术这十年》](https://www.cnblogs.com/jiujuan/p/13025386.html)
+ - [九卷读书：金字塔原理读书笔记 一](https://www.cnblogs.com/jiujuan/p/12967359.html)
+ - [九卷读书：你的灯亮着吗? 发现问题的真正所在](https://www.cnblogs.com/jiujuan/p/12092391.html)
+ - [九卷读书:《高效能人士的7个习惯》脑图](https://www.cnblogs.com/jiujuan/p/10949532.html)
+ - [九卷读书：商业模式画布](https://www.cnblogs.com/jiujuan/p/10982384.html)
 
