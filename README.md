@@ -11,7 +11,7 @@
 - [架构](#架构)
 - [gRPC 学习](#grpc-学习)
 - [深入理解golang](#深入理解golang)
-- [系统和其他](#系统和其他)
+- [操作系统和其他](#操作系统和其他)
 - [golang常用库包使用](#golang常用库包使用)
 - [Go 语言并发编程](#go-语言并发编程)
 - [Go 性能优化分析](#go-性能优化分析)
@@ -25,7 +25,7 @@
 - [学习成长](#学习成长)
 - [java](#java)
 - [网络协议](#协议)
-- [九卷读书](##九卷读书)
+- [九卷读书](#九卷读书)
 
 
 ## 云原生和kubernetes
@@ -184,7 +184,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：redis操作库go-redis使用(02)-Redis5种基本数据类型操作](https://www.cnblogs.com/jiujuan/p/17215125.html)
 - [golang常用库包：redis操作库go-redis使用(03)-高级数据结构和其它特性](https://www.cnblogs.com/jiujuan/p/17231723.html)
 
-- [Go package(3)：io包介绍和使用](Go package(3)：io包介绍和使用)
+- [Go package(3)：io包介绍和使用](https://www.cnblogs.com/jiujuan/p/14005731.html)
 
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
 - [Go 中的反射 reflect 介绍和基本使用](https://www.cnblogs.com/jiujuan/p/17142703.html)
