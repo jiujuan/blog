@@ -100,7 +100,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [Golang 汇编asm语言基础学习](https://www.cnblogs.com/jiujuan/p/16555192.html)
 
-## golang常用库使用
+## golang常用库包使用
 - [golang常用库：字段参数验证库-validator使用](https://www.cnblogs.com/jiujuan/p/13823864.html)
 - [golang常用库：操作数据库的orm框架-gorm基本使用](https://www.cnblogs.com/jiujuan/p/12676195.html)
 - [golang常用库：gorilla/mux-http路由库使用](https://www.cnblogs.com/jiujuan/p/12768907.html)
@@ -109,13 +109,19 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：cli命令行/应用程序生成工具-cobra使用](https://www.cnblogs.com/jiujuan/p/15487918.html)
 - [golang常用库包：日志记录库-logrus使用](https://www.cnblogs.com/jiujuan/p/15542743.html)
 - [golang常用库包：Go依赖注入(DI)工具-wire使用](https://www.cnblogs.com/jiujuan/p/16136633.html)
+- [golang常用库包：redis操作库go-redis使用(01)-Redis数据类型简介和连接Redis的几种方式](https://www.cnblogs.com/jiujuan/p/17207166.html)
+- [golang常用库包：redis操作库go-redis使用(02)-Redis5种基本数据类型操作](https://www.cnblogs.com/jiujuan/p/17215125.html)
+- [golang常用库包：redis操作库go-redis使用(03)-高级数据结构和其它特性](https://www.cnblogs.com/jiujuan/p/17231723.html)
 
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
-
-## Go 标准库和其他
 - [Go 中的反射 reflect 介绍和基本使用](https://www.cnblogs.com/jiujuan/p/17142703.html)
 
+## Go 语言并发编程
 - [Go语言并发编程(1)：对多进程、多线程、协程和并发、并行的理解](https://www.cnblogs.com/jiujuan/p/17151595.html)
+- [Go语言并发编程(2)：channel 通道介绍和使用](https://www.cnblogs.com/jiujuan/p/17248549.html)
+- [Go语言并发编程(3)：sync包介绍和使用(上)-Mutex,RWMutex,WaitGroup,sync.Map](https://www.cnblogs.com/jiujuan/p/17248551.html)
+- [Go语言并发编程(4)：sync包介绍和使用(下)-Once,Pool,Cond](https://www.cnblogs.com/jiujuan/p/17248552.html)
+
 
 ## Gin Web 框架学习系列
 - [01-quickstart](https://github.com/jiujuan/gin-tutorial/blob/master/01quickstart/main.go)
