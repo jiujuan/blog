@@ -25,6 +25,7 @@
 ## 云原生和kubernetes
 
 - [云原生学习101-云原生概览](https://github.com/jiujuan/zenblog/blob/master/content/cloud-native-learning-intro-101-1.md)
+- [云原生概览](https://www.cnblogs.com/jiujuan/p/16158019.html)
 - [kubernetes(k8s)基础学习-kubernetes是什么？有什么用？](https://www.cnblogs.com/jiujuan/p/17107088.html)
 
 ## 微服务
@@ -108,6 +109,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [docker学习(5)-常用命令](./content/learning-docker-5.md)
 - [服务端高性能网络IO编程模型简析](https://www.cnblogs.com/jiujuan/p/16586900.html)
 - [linux和unix中的IO模型总结](https://www.cnblogs.com/jiujuan/p/16564610.html)
+- [对进程、线程和协程的理解以及它们的区别](https://www.cnblogs.com/jiujuan/p/16193142.html)
 
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
@@ -162,6 +164,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [14-swagger](https://github.com/jiujuan/gin-tutorial/tree/master/14swagger)
 - [15-vue-gorm](https://github.com/jiujuan/gin-tutorial/tree/master/15vue-gorm)
 - [16-hystrix-go](https://github.com/jiujuan/gin-tutorial/tree/master/16hystrix-go) hystrix-go和gin结合使用的demo
+
+---
+
+- [一步一步分析Gin框架路由源码及radix tree基数树](https://www.cnblogs.com/jiujuan/p/15973485.html)
 
 ## Go 开发规范(软件工程)
 - [Go 项目文件布局](https://www.cnblogs.com/jiujuan/p/16805835.html)
