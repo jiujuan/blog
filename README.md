@@ -139,6 +139,13 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 
 ## 操作系统和其他
+- [Linux内存管理](https://www.cnblogs.com/jiujuan/p/10712197.html)
+- [Linux进程的虚拟内存](https://www.cnblogs.com/jiujuan/p/12054748.html)
+- [Linux内存：物理内存管理概述](https://www.cnblogs.com/jiujuan/p/12054692.html)
+- [Linux进程: task_struct结构体成员](https://www.cnblogs.com/jiujuan/p/11715853.html)
+- [Linux进程：管理和调度](https://www.cnblogs.com/jiujuan/p/12040884.html)
+- [线程，进程和并发](https://www.cnblogs.com/jiujuan/p/8911898.html)
+
 - [到底什么是锁？](./content/what-is-lock-1.md)
 - [基于Redis的分布式锁真的安全吗？](https://www.cnblogs.com/jiujuan/p/10595838.html)
 
@@ -148,13 +155,6 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [服务端高性能网络IO编程模型简析](https://www.cnblogs.com/jiujuan/p/16586900.html)
 - [linux和unix中的IO模型总结](https://www.cnblogs.com/jiujuan/p/16564610.html)
 - [对进程、线程和协程的理解以及它们的区别](https://www.cnblogs.com/jiujuan/p/16193142.html)
-
-- [Linux内存管理](https://www.cnblogs.com/jiujuan/p/10712197.html)
-- [Linux进程的虚拟内存](https://www.cnblogs.com/jiujuan/p/12054748.html)
-- [Linux内存：物理内存管理概述](https://www.cnblogs.com/jiujuan/p/12054692.html)
-- [Linux进程: task_struct结构体成员](https://www.cnblogs.com/jiujuan/p/11715853.html)
-- [Linux进程：管理和调度](https://www.cnblogs.com/jiujuan/p/12040884.html)
-- [线程，进程和并发](https://www.cnblogs.com/jiujuan/p/8911898.html)
 
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
