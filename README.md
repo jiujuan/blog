@@ -156,6 +156,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [linux和unix中的IO模型总结](https://www.cnblogs.com/jiujuan/p/16564610.html)
 - [对进程、线程和协程的理解以及它们的区别](https://www.cnblogs.com/jiujuan/p/16193142.html)
 
+- [负载均衡load balancing和算法介绍](https://www.cnblogs.com/jiujuan/p/17270064.html)
+
 ## 深入理解golang
 - [深入理解Go语言(01): interface源码分析](https://www.cnblogs.com/jiujuan/p/12653806.html)
 - [深入理解Go语言(02): channels - kavya Joshi](https://www.cnblogs.com/jiujuan/p/12026551.html)
