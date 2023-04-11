@@ -186,6 +186,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [golang常用库包：redis操作库go-redis使用(02)-Redis5种基本数据类型操作](https://www.cnblogs.com/jiujuan/p/17215125.html)
 - [golang常用库包：redis操作库go-redis使用(03)-高级数据结构和其它特性](https://www.cnblogs.com/jiujuan/p/17231723.html)
 
+- [golang常用库包：log日志记录-uber的Go日志库zap使用详解](https://www.cnblogs.com/jiujuan/p/17304844.html)
+
 - [Go package(3)：io包介绍和使用](https://www.cnblogs.com/jiujuan/p/14005731.html)
 
 - [golang 中 channel 的详细使用、使用注意事项及死锁分析](https://www.cnblogs.com/jiujuan/p/16723573.html)
