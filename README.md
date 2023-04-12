@@ -67,6 +67,7 @@
 - [Go微服务框架go-kratos实战学习05：分布式链路追踪 OpenTelemetry 使用](https://www.cnblogs.com/jiujuan/p/16349519.html)
 - [Go微服务框架go-kratos实战学习06：配置使用-file和nacos配置中心](https://www.cnblogs.com/jiujuan/p/16498072.html)
 - [Go微服务框架go-kratos实战学习07：consul 作为服务注册和发现中心](https://www.cnblogs.com/jiujuan/p/17196383.html)
+- [Go微服务框架go-kratos实战学习08：负载均衡基本使用](https://www.cnblogs.com/jiujuan/p/17311134.html)
 
 > [go-kratos实战代码地址](https://github.com/jiujuan/go-kratos-demos)
 
