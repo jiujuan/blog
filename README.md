@@ -58,6 +58,7 @@
 ### 服务治理
 - [服务治理：常用限流算法总结](https://www.cnblogs.com/jiujuan/p/16264022.html)
 - [服务治理：几种开源限流算法库/应用软件介绍和使用](https://www.cnblogs.com/jiujuan/p/16283141.html)
+- [(微服务)服务治理：熔断器介绍以及hystrix-go的使用](https://www.cnblogs.com/jiujuan/p/17327387.html)
 
 ### go-kratos 微服务实战系列
 - [Go微服务框架go-kratos实战学习01：quickstart 快速创建项目 ](https://www.cnblogs.com/jiujuan/p/16322725.html)
