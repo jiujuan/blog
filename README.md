@@ -53,6 +53,8 @@
 - [微服务架构学习与思考(11)：开源 API 网关02-以 Java 为基础的 API 网关详细介绍](https://www.cnblogs.com/jiujuan/p/16814545.html)
 - [微服务架构学习与思考(12)：从单体架构到微服务架构的演进历程](https://www.cnblogs.com/jiujuan/p/17066590.html)
 
+- [微服务架构学习与思考(13)：分布式配置中心](https://www.cnblogs.com/jiujuan/p/17438880.html)
+
 - [小公司需要使用微服务架构吗？](https://www.cnblogs.com/jiujuan/p/17116605.html)
 
 ### 服务治理
