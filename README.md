@@ -56,6 +56,7 @@
 - [微服务架构学习与思考(13)：分布式配置中心](https://www.cnblogs.com/jiujuan/p/17438880.html)
 
 - [小公司需要使用微服务架构吗？](https://www.cnblogs.com/jiujuan/p/17116605.html)
+- [微服务架构学习与思考(14)：监控和可观测](https://www.cnblogs.com/jiujuan/p/17495270.html)
 
 ### 服务治理
 - [服务治理：常用限流算法总结](https://www.cnblogs.com/jiujuan/p/16264022.html)
