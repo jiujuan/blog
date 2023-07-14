@@ -8,7 +8,7 @@
   - [Go 微服务实战系列](#go-kratos-微服务实战系列)
 - [Redis原理学习](#redis原理学习)
 - [MySQL](#mysql)
-- [架构](#架构)
+- [架构-分布式](#架构-分布式)
 - [gRPC 学习](#grpc-学习)
 - [深入理解golang](#深入理解golang)
 - [操作系统和其他](#操作系统和其他)
@@ -113,7 +113,7 @@
 - [MySQL InnoDB存储引擎大观](https://www.cnblogs.com/jiujuan/p/11336049.html)
 - [五大常见的MySQL高可用方案](https://www.cnblogs.com/jiujuan/p/10907854.html)
 
-## 架构
+## 架构-分布式
 - [了解企业架构EA(Enterprise Architecture)](https://www.cnblogs.com/jiujuan/p/16871889.html)
 
 - [分层架构设计总结](https://www.cnblogs.com/jiujuan/p/16880756.html)
@@ -121,6 +121,8 @@
 - [《恰如其分的软件架构》笔记摘要](https://www.cnblogs.com/jiujuan/p/13594006.html)
 
 - [RESTful API 介绍，设计](https://www.cnblogs.com/jiujuan/p/12791574.html)
+
+- [全面了解事务、分布式事务理论及其实现方案](https://www.cnblogs.com/jiujuan/p/17542160.html)
 
 ## gRPC 学习
 
