@@ -122,6 +122,7 @@
 
 - [RESTful API 介绍，设计](https://www.cnblogs.com/jiujuan/p/12791574.html)
 
+### 分布式事务
 - [全面了解事务、分布式事务理论及其实现方案](https://www.cnblogs.com/jiujuan/p/17542160.html)
 
 ## gRPC 学习
@@ -170,6 +171,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [深入理解Go语言(02): channels - kavya Joshi](https://www.cnblogs.com/jiujuan/p/12026551.html)
 - [深入理解Go语言(03)：scheduler调度器 - 基本介绍](https://www.cnblogs.com/jiujuan/p/12735559.html)
 - [深入理解Go语言(04)：scheduler调度器-GPM源码分析](https://www.cnblogs.com/jiujuan/p/12977832.html)
+
 - [深入理解Go语言(05)：sync.map原理分析](https://www.cnblogs.com/jiujuan/p/13365901.html)
 - [深入理解Go语言(06)：Context原理分析](https://www.cnblogs.com/jiujuan/p/13795723.html)
 - [TCMalloc 内存分配原理简析](https://www.cnblogs.com/jiujuan/p/13922551.html)
