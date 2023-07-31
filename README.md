@@ -35,7 +35,9 @@
 
 - [Docker常用命令总结](https://www.cnblogs.com/jiujuan/p/13758351.html)
 
-- [kubernetes(k8s)基础学习-kubernetes是什么？有什么用？](https://www.cnblogs.com/jiujuan/p/17107088.html)
+- [kubernetes(k8s)大白学习01-kubernetes是什么？有什么用？](https://www.cnblogs.com/jiujuan/p/17107088.html)
+
+- [kubernetes(k8s)大白学习02：容器和docker基础、使用、架构学习](https://www.cnblogs.com/jiujuan/p/17447292.html)
 
 ## 微服务
 
