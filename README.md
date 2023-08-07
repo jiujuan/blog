@@ -127,6 +127,7 @@
 
 - [RESTful API 介绍，设计](https://www.cnblogs.com/jiujuan/p/12791574.html)
 - [软件设计中的一些原则介绍](https://www.cnblogs.com/jiujuan/p/17420709.html)
+- [分布式搜索引擎Elasticsearch基础入门学习](https://www.cnblogs.com/jiujuan/p/17387600.html)
 
 ### 分布式事务
 - [全面了解事务、分布式事务理论及其实现方案](https://www.cnblogs.com/jiujuan/p/17542160.html)
