@@ -261,6 +261,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## 管理-产品相关
 
 ### 管理
+- [程序员怎么做沟通？聊一聊程序员沟通相关的问题](https://www.cnblogs.com/jiujuan/p/18029741)
 - [聊一聊向上管理](https://www.cnblogs.com/jiujuan/p/16611584.html)
 - [技术管理的一些理念](https://www.cnblogs.com/jiujuan/p/14682355.html)
 - [技术人怎么“打通”产品业务？](https://www.cnblogs.com/jiujuan/p/13467196.html)
