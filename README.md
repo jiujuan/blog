@@ -307,6 +307,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [《阿里感悟》- 技术人员的职业规划](https://www.cnblogs.com/jiujuan/p/9278742.html)
 - [我获得的职业生涯发展最佳建议](https://www.cnblogs.com/jiujuan/p/18033366)
    - 原文：https://humanwhocodes.com/blog/2013/10/15/the-best-career-advice-ive-received/  作者：Nicholas C. Zakas
+ 
+- [程序员天天 CURD，怎么才能成长，职业发展的思考 ？](https://www.cnblogs.com/jiujuan/p/18170433)
 
 ## java
 - [java基础学习：java中的反射](https://www.cnblogs.com/jiujuan/p/16659488.html)
