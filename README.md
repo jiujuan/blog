@@ -302,6 +302,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [需求一直做不完，怎么办？](https://www.cnblogs.com/jiujuan/p/11953572.html)
 
 ## 学习成长
+- [程序员天天 CURD，怎么才能成长，职业发展的思考(3)](https://www.cnblogs.com/jiujuan/p/18185133)
 - [程序员天天 CURD，怎么才能成长，职业发展的思考(2)](https://www.cnblogs.com/jiujuan/p/18173711)
 - [程序员天天 CURD，怎么才能成长，职业发展的思考 ？](https://www.cnblogs.com/jiujuan/p/18170433)
 - [我获得的职业生涯发展最佳建议](https://www.cnblogs.com/jiujuan/p/18033366)
