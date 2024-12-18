@@ -290,6 +290,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [技术管理：项目管理概要](https://www.cnblogs.com/jiujuan/p/10597880.html)
 - [好的团队和差的团队（好的产品经理和差的产品经理）](https://www.cnblogs.com/jiujuan/p/10053961.html)
 
+- [麦肯锡高效解决复杂问题法：七步解决问题法 (又名：七步成诗法)。综合运用多种方法、工具如5W2H、5Why、PDCA、逻辑树、头脑风暴等进行分析](https://www.cnblogs.com/jiujuan/p/18592663)
+
 
 ### 产品
 - [用价值链分析法: 分析软件开发的价值定位、赋能及创业杂感](https://www.cnblogs.com/jiujuan/p/13676593.html)
