@@ -303,6 +303,8 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [需求一直做不完，怎么办？](https://www.cnblogs.com/jiujuan/p/11953572.html)
 
+- [产品研发流程：从需求分析、产品设计到部署交付各阶段说明](https://www.cnblogs.com/jiujuan/p/18486493)
+
 ## 学习成长
 - [程序员天天 CURD，怎么才能成长，职业发展的思考(3)](https://www.cnblogs.com/jiujuan/p/18185133)
 - [程序员天天 CURD，怎么才能成长，职业发展的思考(2)](https://www.cnblogs.com/jiujuan/p/18173711)
