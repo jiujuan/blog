@@ -26,6 +26,7 @@
 - [java](#java)
 - [网络协议](#协议)
 - [九卷读书](#九卷读书)
+- [创业与商业](#创业与商业)
 
 
 ## 云原生和kubernetes
@@ -341,6 +342,10 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
  - [九卷读书：你的灯亮着吗? 发现问题的真正所在](https://www.cnblogs.com/jiujuan/p/12092391.html)
  - [九卷读书:《高效能人士的7个习惯》脑图](https://www.cnblogs.com/jiujuan/p/10949532.html)
  - [九卷读书：商业模式画布](https://www.cnblogs.com/jiujuan/p/10982384.html)
-  
+
+## 创业与商业
  - [程序员从0到1创业时，第一步重要的思考是什么？](https://www.cnblogs.com/jiujuan/p/18161169)
+ - [《四步创业法》读书笔记 1](https://www.cnblogs.com/jiujuan/p/18728144)
+ - [生意的本质是什么？几个关键概念的理解](https://www.cnblogs.com/jiujuan/p/18749619)
+ - [用大模型DeepSeek分析一篇小公司创业失败的文章，失败的原因有哪些？](https://www.cnblogs.com/jiujuan/p/18733141)
 
