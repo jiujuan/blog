@@ -349,3 +349,6 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
  - [生意的本质是什么？几个关键概念的理解](https://www.cnblogs.com/jiujuan/p/18749619)
  - [用大模型DeepSeek分析一篇小公司创业失败的文章，失败的原因有哪些？](https://www.cnblogs.com/jiujuan/p/18733141)
 
+## AI 大模型
+- [LLM 大模型发展简史](https://www.cnblogs.com/jiujuan/p/18752957)
+
