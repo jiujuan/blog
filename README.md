@@ -298,6 +298,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [敏捷开发：精益软件开发和看板kanban开发方法的区别是什么](https://www.cnblogs.com/jiujuan/p/18777971)
 - [敏捷开发：什么是看板Kanban方法？看板方法介绍与使用](https://www.cnblogs.com/jiujuan/p/18690584)
 - [敏捷开发：如何高效开每日站会（Daily Stand-up Meeting）](https://www.cnblogs.com/jiujuan/p/18658641)
+- [敏捷开发：敏捷项目可视化管理-ScrumBoard(Scrum板)使用介绍](https://www.cnblogs.com/jiujuan/p/18596315)
 - [软件产品开发中常见的10个问题及处理方法](https://www.cnblogs.com/jiujuan/p/18794416)
 
 ### 产品
