@@ -364,3 +364,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 ## AI 大模型
 - [LLM 大模型发展简史](https://www.cnblogs.com/jiujuan/p/18752957)
 
+## 认知成长
+
+- [有哪些「低级苦」和「高级苦」（认知成长）](https://www.cnblogs.com/jiujuan/p/18806965)
+
