@@ -369,3 +369,5 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [有哪些「低级苦」和「高级苦」（认知成长）](https://www.cnblogs.com/jiujuan/p/18806965)
 
+- [如何对一个问题进行全面思考？](https://www.cnblogs.com/jiujuan/p/19038596)
+
