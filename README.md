@@ -371,4 +371,5 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 
 - [如何对一个问题进行全面思考？](https://www.cnblogs.com/jiujuan/p/19038596)
 - [聊一聊结构化思维](https://www.cnblogs.com/jiujuan/p/13364052.html)
+- [思维模型：六顶思考帽，从不同角度思考问题，提升思维认知](https://www.cnblogs.com/jiujuan/p/18575438)
 
