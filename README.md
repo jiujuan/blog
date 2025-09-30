@@ -328,6 +328,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [资深技术Leader曹乐：如何成为技术大牛](https://www.cnblogs.com/jiujuan/p/12036029.html)
 - [“我”这个程序员天天curd，怎么才能成长，职业生涯怎么发展？](https://www.cnblogs.com/jiujuan/p/13879947.html)
 - [《阿里感悟》- 技术人员的职业规划](https://www.cnblogs.com/jiujuan/p/9278742.html)
+- [大龄程序员35岁后职业发展出路：认知与思路转变](https://www.cnblogs.com/jiujuan/p/19110359)
 
 
 ## java
