@@ -370,5 +370,7 @@ Scrum 中的 Product Backlog(产品待办列表) 详细介绍可以看下面这�
 
 ## 参考
 
+- 《有效需求分析》作者: 徐锋  https://book.douban.com/subject/26952983/
 - 敏捷开发：用户故事估算估时方法介绍 https://www.cnblogs.com/jiujuan/p/18585259
 - 敏捷开发：Scrum 中的 Product Backlog(产品待办列表) 详细介绍-待办列表管理、用户故事、优先级评估等等 https://www.cnblogs.com/jiujuan/p/18559611
+- 《精益产品开发手册》https://book.douban.com/subject/36458020/
