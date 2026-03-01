@@ -134,6 +134,8 @@
 - [软件设计中的一些原则介绍](https://www.cnblogs.com/jiujuan/p/17420709.html)
 - [分布式搜索引擎Elasticsearch基础入门学习](https://www.cnblogs.com/jiujuan/p/17387600.html)
 
+- [高并发架构系统技术知识总结](./content/%E9%AB%98%E5%B9%B6%E5%8F%91%E6%9E%B6%E6%9E%84%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.md)
+
 ### 分布式事务
 - [全面了解事务、分布式事务理论及其实现方案](https://www.cnblogs.com/jiujuan/p/17542160.html)
 
