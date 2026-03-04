@@ -1,5 +1,9 @@
 更多文章请看：[我的博客](https://www.cnblogs.com/jiujuan/)： https://www.cnblogs.com/jiujuan/
 
+
+
+- GitHub开源书籍 [dive-into-microservices-architecture](https://github.com/jiujuan/dive-into-microservices-architecture) 《深入理解微服务架构》
+
 ## 目录
 
 - [云原生和kubernetes](#云原生和kubernetes)
@@ -315,7 +319,7 @@ gRPC学习示例[代码地址](https://github.com/jiujuan/grpc-tutorial)
 - [九卷读书：《产品设计思维：电商产品设计全攻略》读书笔记](https://www.cnblogs.com/jiujuan/p/14452748.html)
 - [九卷读书：《跨越鸿沟》-产品和技术生命周期一点思考](https://www.cnblogs.com/jiujuan/p/12884881.html)
 - [九卷读书[产品]：产品的视角-产品思维框架](https://www.cnblogs.com/jiujuan/p/11663782.html)
-- [九卷读书[产品]: 产品的视角-产品经理能力模型](https://www.cnblogs.com/jiujuan/p/11627990.html)
+- [九卷读书[产品]: 产品的视角-产品经理能力模型(https://www.cnblogs.com/jiujuan/p/11627990.html)
 - [[产品]：腾讯8分钟产品课](https://www.cnblogs.com/jiujuan/p/12173264.html)
 
 - [需求一直做不完，怎么办？](https://www.cnblogs.com/jiujuan/p/11953572.html)
