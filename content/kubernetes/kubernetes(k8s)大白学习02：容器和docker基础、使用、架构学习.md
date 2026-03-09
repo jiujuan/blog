@@ -1,0 +1,554 @@
+## 一、什么是容器
+
+### 容器简介
+
+简单说：容器（container）就是计算机上的一个沙盒进程，它与计算机上的所有其它进程相隔离。
+
+这种隔离是怎么做到的呢？它利用了内核提供的 namespace 和 cgroup 这 2 种技术。这些技术能力在 Linux 中已经存在了很长时间。而 Docker 或容器技术致力于将这些功能更易于使用和更方便使用。容器技术把 linux 中已存在的这些技术显性化了，让用户容易操作使用，体验更好。
+
+”沙盒“就像是一个集装箱，能够把应用及其相关依赖软件装在一起。在 docker 的隔离下，应用和应用之间就有了边界，相互隔离不被打扰，也方便“搬来搬去”，搬到各种服务器环境中运行。
+
+Docker 的 logo 是一条鲸鱼驼着许多"四方盒子“ - 标准集装箱，很形象的表达。把软件打包标准化，像一个一个集装箱，可以方便快捷运输到各种服务器环境中并安装。
+
+![image-20230517200139565](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717545-2141423326.png)
+
+Docker 的口号：
+
+> Develop faster. Run anywhere.
+
+Docker 是容器技术的一种实现，还有其它容器比如 Podman，Container 等。
+
+容器的实质是进程。但与直接运行在宿主机上的进程不同，容器进程运行在属于自己独立的命名空间。因此，容器可以拥有自己独立的 root 文件系统、网络配置、进程空间、自己的用户 ID 空间等等。
+
+
+
+容器的一些特性总结：
+
+1. 它是镜像（image）的一个运行实例。比如你能够使用 docker api 或 cli 创建、启动、停止、移动或删除容器。
+2. 它可以在本地机器、虚拟机或云服务器上运行。
+3. 它可以在任何操作系统上运行。
+4. 它可以与其它容器隔离并运行自己的软件、二进制文件和配置信息。
+5. 它可以自包含一些软件，这样就可以使应用程序几乎在任何地方以相同的方式运行。
+
+比如开发人员在自己笔记本上创建并测试好的容器，无须修改就可以在生产系统的虚拟机、服务器等上面运行。
+
+### 容器解决了什么问题
+
+我们把应用程序开发完之后，部署到服务器上时，会有很多软件需要部署，比如部署 PHP 程序开发的应用项目，就有 MySQL，Redis，Nginx 等各种软件需要部署。
+
+部署的服务器环境呈现多样化，比如物理服务器，云服务器，虚拟机等，不同服务器上安装的操作系统可能又不同，运行环境不同，依赖各不同。
+
+面对这种多个软件需要部署，不同的服务器环境、不同的操作系统，环境差异这么大，如何能做到一键部署且屏蔽彼此的各种差异？如何做到构建一次完之后就能部署到各种不同的服务器环境中？也就是，一次构建，多地多次部署，且都能顺利运行。
+
+这时容器技术就可以解决这些问题。容器能够把应用程序及其依赖的软件打包到一个容器中，然后发布到各种服务器上。
+
+这样就能加快运行环境搭建、应用程序的部署，解决了运维效率和成本高的一些问题。
+
+> 一次构建，随时随地搬运，任意环境运行
+
+![image-20230531134410289](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717572-2144868048.png)
+
+                         （Build，Ship and Run Anywhere）
+
+
+Docker 还提供了一种类似“编程的方式”来方便构建镜像：Dockerfile。
+
+## 二、什么是镜像
+
+镜像（Container Image）是一个模板，一种容器化标准化交付物，容器应用打包的标准格式，用于打包应用程序及其依赖环境。
+
+容器和镜像的关系，这个就相当于面向对象编程语言中，类（container image）和实例（container instance）的关系。镜像是静态定义，容器是镜像运行时的实体。容器可以被创建、启动、删除、暂停等。
+
+容器镜像是一个随时可以运行的软件包，当运行一个容器时，它使用一个隔离的文件系统，这个自定义的文件系统包含应用程序所需的依赖项、配置、脚本、二进制文件等，镜像也包含其它平台的设置。
+
+我们可以借用 [Buildah](https://buildah.io/) 等开源工具，来创建兼容 OCI 和 Docker 的镜像文件。
+
+Dockerfile 是用来构建镜像的文本文件，文本内容包含了构建镜像所需的指令和说明。Docker 等工具可以通过读取 Dockerfile 中的指令自动构建生成容器镜像。
+
+## 三、镜像仓库
+
+镜像仓库（container repository）是存储、分发镜像文件的地方。这些镜像文件放在镜像仓库里。镜像仓库可以是开放的镜像仓库，例如 docker hub；也可以是自建的镜像仓库，比如用 [docker-registry](https://docs.docker.com/registry/) ，[harbor](https://github.com/goharbor/harbor) ， [Nexus](https://www.sonatype.com/products/sonatype-nexus-oss-download) 等。
+
+## 四、什么是Docker
+
+### Docker 简介
+
+Docker 是用 Go 开发实现，基于 linux 的 cgroup，namespace 和 UniosFS 等主要技术，对进程进行封装隔离，在操作系统之上的虚拟化技术。隔离的进程是独立于宿主和其它进程，它又称为容器。
+
+Docker 容器，又进一步的封装，从文件系统、网络到进程隔离等，简化了容器的创建、启动、删除等操作。Docker 技术比虚拟机技术更为轻便。
+
+Docker 可以快速、一致性的交付你的应用程序。
+
+### Docker和虚拟机比较
+
+![image-20230516200027411](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717608-848061027.png)
+
+   （来自 [kubernetes](https://kubernetes.io/zh-cn/docs/concepts/overview/) 官网）
+
+从上图软件交付的变化历程图可以看出，容器和传统虚拟机的不同。
+
+- **传统虚拟机**是虚拟出一套硬件，在其上运行完整操作系统，在这之上再来运行各种应用软件。
+
+- **容器**直接运行在容器运行时上，容器运行时直接运行在宿主机的内核里，它也不需要进行硬件虚拟化。
+
+虚拟机和容器的比较：
+
+| 特点           | 容器                                                         | 虚拟机                                                       |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 隔离性         | 较弱的隔离                                                   | 强隔离                                                       |
+| 启动速度       | 秒级                                                         | 分钟级                                                       |
+| 镜像大小       | 最小的几 MB                                                  | 几百 MB 到几个 GB                                            |
+| 性能(与裸机比) | 损耗小于 2%                                                  | 损耗 15% 左右                                                |
+| 系统支持数量   | 单机可支持 100 个到 1000 个容器                              | 单机支持 10 到 100 个左右                                    |
+| 安全性         | 1.容器内的用户从普通用户权限提升到root用户，就直接具备宿主机root权限 2. 容器中没有硬件隔离，这使得容器攻击彼此牵连 | 1.虚拟机租户root权限和主机的root权限是分离的 2.硬件隔离技术：防止虚拟机彼此交互 |
+
+## 五、Docker架构和执行流程
+
+### Docker 整体架构
+
+Docker 整体架构图：
+
+![image-20230516202647251](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717624-1772911570.png)
+
+       （来自：[docker docs architecture](https://docs.docker.com/get-started/overview/)）
+
+Docker 架构是一个客户端-服务端架构，客户端是 `Client`，服务端是 `Docker Host`。后面的 `Registry` 是一个镜像仓库。
+
+Docker 客户端与 Docker daemon 守护进程进行通信，守护进程负责构建、运行和分发 Docker 容器。Docker 客户端和 Docker 守护进程直接进行信息交互。Docker 还有另外一个客户端 Docker Compose，它处理一组容器组成的应用程序。
+
+**Client** ：docker 客户端。`docker run` ，`docker build`，`docker pull`，都是 docker 里的命令。
+
+- `docker build`：执行 docker 构建命令，会根据 docker 文件构建一个镜像存放在本机上。
+- `docker run`：执行 docker 启动命令，它会将镜像运行为容器。
+- `docker pull`：该命令从镜像仓库拉取镜像文件至本地 docker 主机，或将本地镜像推送至远端镜像仓库。
+
+**Docker Host**：docker 主机。Docker daemon，守护进程；Images，镜像；Containers，容器。
+
+**Registry**：镜像仓库，存储镜像的仓库。
+
+### docker 执行流程
+
+其实上面的架构图已经把 docker 执行流程画出来了。只不过看起来不太明显，在简化下：
+
+![image-20230517182349311](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717665-1282009167.png)
+
+          （docker 命令执行流程，实线条不同颜色代表不同步骤）
+
+从图上可以看出，docker 客户端发出命令，后都会与 docker host（docker 主机）交互，然后在由 docker 主机进行后面的操作。
+
+比如 docker 构建：在 docker 客户端发出命令，docker 主机的守护进程接收命令，然后它通过镜像来运行出一个容器。
+
+### docker 底层技术
+
+请看下面的架构图：
+
+![image-20230529144517118](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717595-83826625.png)
+
+                      (docker 底层技术构成简图)
+
+**linux kernel**，docker 技术的实现依赖了 linux 底层一些技术特性：
+
+- Namespace：每个容器都有自己独立的命名空间，运行在其中的应用像是在独立操作系统上运行。命名空间保证了容器彼此不受影响。
+- CGroups：对共享资源进行隔离、限制等。比如对CPU、内存的限制。
+- Union FS：联合文件系统是一种分层、轻量级且高性能的文件系统。
+
+Docker 使用存储驱动程序（storage driver）来存储 image 的图像层，将数据存储在容器的可写层中。 
+
+Docker 镜像是由一系列层（layers）构建而成，每层代表 Dockerfile 的一条指令。除了最后一层之外每一层都是只读的。
+
+Docker 用 UnionFS （联合文件系统）把这些层联合在一起。
+
+![image-20230529150803868](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717860-2104524590.png)
+
+            （来源docker storage driver：[images and layers](https://docs.docker.com/storage/storagedriver/)）
+
+
+
+![image-20230531141421811](https://img2023.cnblogs.com/blog/650581/202305/650581-20230531203717935-341213030.png)
+
+           （图片来源网络侵删）
+
+**docker engine**
+
+docker engine 引擎里的 [runc](https://github.com/opencontainers/runc) 是开放容器运行时，它是 [OCI](https://opencontainers.org/)（Open Container Initiative）Spec 的一个实现。
+
+docker engine 在 linux 下提供了很多存储驱动，Docker Storage Driver：
+
+| Docker Storage Driver |
+| :-------------------- |
+| `overlay2`            |
+| `fuse-overlayfs`      |
+| `btrfs` and `zfs`     |
+| `vfs`                 |
+| `devicemapper`        |
+
+关于上面 docker storage driver 的更多信息请查看：https://docs.docker.com/storage/storagedriver/select-storage-driver/ 。
+
+## 六、Docker安装
+
+Docker 可以在不同的操作系统中安装，官方安装地址：
+
+- https://docs.docker.com/engine/install/ docker engine 安装
+- https://docs.docker.com/get-docker/ docker desktop 安装，docker 桌面系统安装
+
+我在虚拟机中装的 ubuntu 操作系统：
+
+> Description: Ubuntu 20.04.2 LTS, Codename:	focal
+
+该系统对应 docker 官方安装地址：https://docs.docker.com/engine/install/ubuntu/ 。
+
+具体安装 docker 就不详细说明了，请按照官方文档一步一步进行安装。
+
+我安装的docker版本：
+
+```shell
+$ docker -v
+Docker version 24.0.1, build 6802122
+```
+
+验证是否安装成功：
+
+```shell
+$ sudo docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+719385e32844: Pull complete 
+Digest: sha256:fc6cf906cbfa013e80938cdf0bb199fbdbb86d6e3e013783e5a766f50f5dbce0
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+## 七、Docker简单使用
+
+> docker cli文档地址：https://docs.docker.com/engine/reference/commandline/cli/
+
+### 启动容器
+
+#### 启动容器
+
+创建或启动一个新容器的命令：`docker run` , 语法为：
+
+> docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+获取更多 docker run 帮助文档：`docker run --help`。
+
+
+
+比如，下面的命令输出一个“hello world”后，终止容器。
+
+因为我本地没有 ubuntu:20.04 这个镜像，所以要先下载，`docker run` 会自动下载这个镜像，命令和运行过程如下：
+
+```shell
+$ sudo docker run ubuntu:20.04 /bin/echo 'hello world'
+Unable to find image 'ubuntu:20.04' locally
+20.04: Pulling from library/ubuntu
+ca1778b69356: Pull complete 
+Digest: sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e58387dc6b3
+Status: Downloaded newer image for ubuntu:20.04
+hello world
+```
+
+下载完镜像后，自动运行这个镜像，最后输出了 hello world 。
+
+启动一个 bash 终端，允许用户进入容器终端进行交互：
+
+```shell
+$ sudo docker run -t -i ubuntu:20.04 /bin/bash
+root@049706bffe28:/#
+```
+
+输入 ls 命令：
+
+```shell
+root@049706bffe28:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+```
+
+来解释一下 `docker run -t -i` 这个命令中的参数：
+
+> `-t` 选项让 docker 分配一个伪终端并绑定到容器的标准输入上
+>
+> `-i` 交互式操作，也就是命令行模式进入容器
+>
+> 这2个参数也可以写一起：`docker run -it ubuntu:20.04 /bin/bash`
+
+退出容器终端可以输入命令 `exit` 。
+
+上面的两个参数还可以合一起：
+
+```shell
+docker run -dit ubuntu:20.04
+```
+
+- 大部分情况下，我们希望 docker 是在后台的运行的。加 `-d` 指定容器运行模式， 默认不会进入容器，想要进入容器需要继续执行指令 `docker exec`，下面会介绍。
+
+如果 docker 命令太长，还可以用 `\` 来换行，如下：
+
+```shell
+docker run -it --rm \
+    ubuntu:20.04 \
+    /bin/bash
+```
+
+- -it：-i 交互操作，-t 终端，上面解释了
+- --rm：这个参数表示容器退出后随之将其删除
+- ubuntu:20.04：以 ubuntu:20.04 镜像为基础来启动容器
+- /bin/bash：放在镜像后面的是命令，有一个交互式的 shell，这里使用的 bash
+
+#### 启动已停止运行容器
+
+启动已经停止运行容器：`docker start` 或 `docker container start`
+
+重新启动容器：`docker container restart` 命令将一个运行态的容器终止，然后重新启动它
+
+终止运行中容器：`docker container stop` 来终止一个运行中的容器
+
+
+
+查看所有的容器：
+
+```shell
+VirtualBox:~$ sudo docker ps -a
+CONTAINER ID   IMAGE       COMMAND      CREATED         STATUS          PORTS     NAMES
+56ca83925f03 ubuntu:20.04  "/bin/bash"  15 minutes ago  Up 15 minutes             strange_allen   
+c1482012b069 ubuntu:20.04  "/bin/bash"  26 minutes ago  Exited (0) 20 minutes ago gallant_ellis     
+```
+
+启动停止的容器 container id c1482012b069：
+
+```shell
+VirtualBox:~$ sudo docker start c1482012b069
+c1482012b069
+VirtualBox:~$ sudo docker ps -a
+CONTAINER ID  IMAGE        COMMAND      CREATED         STATUS        PORTS     NAMES
+56ca83925f03  ubuntu:20.04 "/bin/bash"  21 minutes ago   Up 20 minutes         strange_allen       
+c1482012b069  ubuntu:20.04  "/bin/bash" 31 minutes ago   Up 8 seconds          gallant_ellis       
+```
+
+### 获取镜像
+
+大量的镜像文件都存储在远端的镜像仓库中，比如 docker hub 。获取镜像的命令 `docker pull` ，语法为：
+
+> `docker pull [OPTIONS] NAME[:TAG|@DIGEST]`
+
+- OPTIONS：选项，比如，-a
+- NAME[:TAG|@DIGEST]：镜像地址
+
+获取 docker pull 更详细参数：`docker pull --help` 。
+
+比如，拉取 ubuntu:20.04 这个镜像文件：
+
+```shell
+$ sudo docker pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+Digest: sha256:db8bf6f4fb351aa7a26e27ba2686cf35a6a409f65603e59d4c203e58387dc6b3
+Status: Image is up to date for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+```
+
+由于前面启动镜像命令 `docker run` 运行了这个镜像文件，显示 Image is up to date for ubuntu:20.04 。
+
+拉取镜像后，就可以启动这个镜像，命令 `docker run` 。
+
+```shell
+$ sudo docker run -it --rm ubuntu:20.04 bash
+root@5c2a77428b80:/# 
+```
+
+> `-it`：`-i` 表示交互操作，`-t` 表示是一个终端
+>
+> `--rm`：这个参数表示容器退出后会将其删除。在默认情况下，为了排障需要，退出的容器并不会马上删除，触发手动执行 docker rm。我这里只是演示命令的执行，不需要排障，`--rm` 可以避免浪费空间
+>
+> ubuntu:20.04：表示镜像，以这个镜像来作为启动容器
+>
+> bash：放在镜像后面的是命令。这里希望进入交互式 shell，所以用 bash
+
+### 列出镜像
+
+**列出所有镜像**
+
+列出镜像的命令：`docker image ls` ，显示镜像下载到本地后，展开后各层所占用空间的总和。语法：
+
+> docker image ls [OPTIONS] [REPOSITORY[:TAG]]
+
+关于 docker image ls 更多用法，可以查看帮助命令：`docker image ls --help` 。
+
+```shell
+$ sudo docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
+hello-world   latest    9c7a54a9a43c   2 weeks ago   13.3kB
+ubuntu        20.04     88bd68917189   5 weeks ago   72.8MB
+```
+
+列出了仓库名、标签、镜像ID、创建时间、所占用的空间大小。
+
+镜像ID是镜像的唯一标识符，一个镜像可以对应多个**标签**。
+
+**列出部分镜像**
+
+列出部分镜像的命令：`docker image ls 镜像名`
+
+比如下面例子；
+
+```shell
+$ sudo docker image ls ubuntu
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       20.04     88bd68917189   5 weeks ago   72.8MB
+```
+
+还可以加过滤的参数 `--filter`，
+
+```shell
+$ sudo docker image ls --format "{{.ID}}: {{.Repository}}"
+9c7a54a9a43c: hello-world
+88bd68917189: ubuntu
+```
+
+### 删除本地镜像
+
+删除本地镜像的命令：`docker image rm`，语法：
+
+> docker image rm [OPTIONS] IMAGE [IMAGE...]
+
+上面大家镜像 IMAGE ，可以是镜像长ID、镜像短ID、镜像名 或镜像摘要。
+
+比如用镜像短ID来删除镜像：
+
+```shell
+$ sudo docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
+hello-world   latest    9c7a54a9a43c   2 weeks ago   13.3kB
+ubuntu        20.04     88bd68917189   5 weeks ago   72.8MB
+
+$ sudo docker image rm 189
+```
+
+### 查看镜像详情
+
+查看镜像详细信息的命令：`docker image inspect` 。
+
+查看镜像 hello-world:latest 的详细信息：
+
+```shell
+docker image inspect hello-world:latest
+```
+
+### 搜索仓库镜像
+
+搜索远程仓库镜像命令：`docker search` 。
+
+例如 查看远程仓库中 ubuntu 的镜像有哪些：
+
+```shell
+docker search ubuntu
+```
+
+### 进入容器
+
+使用 `-d` 参数，容器启动后可以进入后台。
+
+在容器启动后，我们有时需要进入容器镜像操作，命令有 `docker attach` 或 `docker exec` ，推荐使用 `docker exec` , 因为 `docker attach` 进入容器操作完 exit 退出后，会导致容器停止，而 exec 不会。
+
+#### docker attach 进入容器：
+
+```shell
+$ sudo docker run -dit ubuntu:20.04
+c1482012b06914449cafd461931eb890dec01fa8e6858233d3fcc98de9ceb4bc
+
+$ sudo docker container ls
+CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS     NAMES
+c1482012b069   ubuntu:20.04   "/bin/bash"   53 seconds ago   Up 42 seconds             gallant_ellis
+
+$ sudo docker attach c148
+root@c1482012b069:/# 
+```
+
+上面参数 `-d` 表示容器启动后会进入后台运行。
+
+> 注意：上面容器用 `exit` 退出后会导致容器停止运行
+
+```shell
+root@c1482012b069:/# exit
+exit
+VirtualBox:~$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+用命令查看容器，刚才运行的容器退出了。`exec` 就不会。
+
+#### docker exec 进入容器：
+
+```shell
+// 运行容器
+VirtualBox:~$ sudo docker run -dit ubuntu:20.04
+56ca83925f039f9ba087aff8a521678e2dcc87836bffede90ed2f2614aec8065
+
+// 列出容器列表
+VirtualBox:~$ sudo docker container ls
+CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS     NAMES
+56ca83925f03   ubuntu:20.04   "/bin/bash"   16 seconds ago   Up 13 seconds             strange_allen
+
+// 进入容器
+VirtualBox:~$ sudo docker exec -it 56ca bash
+root@56ca83925f03:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+
+// 退出容器
+root@56ca83925f03:/# exit
+exit
+```
+
+退出容器后，在列出容器列表：
+
+```shell
+VirtualBox:~$ sudo docker container ls
+CONTAINER ID   IMAGE          COMMAND       CREATED         STATUS         PORTS     NAMES
+56ca83925f03   ubuntu:20.04   "/bin/bash"   2 minutes ago   Up 2 minutes             strange_allen
+```
+
+CONTAINER ID 和前面显示的 CONTAINER ID 相同，STATUS 状态也是 Up 2 minutes，运行状态，容器没有退出。
+
+### 删除容器
+
+删除终止状态的容器命令：`docker container rm` 
+
+```shell
+docker container rm strange_allen
+```
+
+- 如果要删除一个运行中的容器，加参数 `-f`
+
+> 欢迎大家提建议，讨论，点赞
+
+## 八、参考
+
+- https://docs.docker.com/
+- https://docs.docker.com/registry/
+- https://docs.docker.com/engine/reference/commandline/cli/ Docker CLI 文档
+- https://docs.docker.com/engine/reference/commandline/docker/
+- https://docs.docker.com/storage/storagedriver/
+- https://dockerlabs.collabnix.com/docker/cheatsheet/
+- https://buildah.io/
+- https://github.com/goharbor/harbor
+- https://github.com/opencontainers/runc
+- https://www.opencontainers.org
