@@ -128,9 +128,12 @@
 - [五大常见的MySQL高可用方案](https://www.cnblogs.com/jiujuan/p/10907854.html)
 
 ## 架构-分布式
+
 - [了解企业架构EA(Enterprise Architecture)](https://www.cnblogs.com/jiujuan/p/16871889.html)
 
 - [高并发架构系统技术知识总结](./content/%E9%AB%98%E5%B9%B6%E5%8F%91%E6%9E%B6%E6%9E%84%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.md)
+  
+- [电商平台系统架构演进发展史](./content/电商平台系统架构演进发展史.md)
 
 - [分层架构设计总结](https://www.cnblogs.com/jiujuan/p/16880756.html)
 
